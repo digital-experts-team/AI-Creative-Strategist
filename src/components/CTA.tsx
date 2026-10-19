@@ -74,7 +74,7 @@ export default function CTA({ activeTheme }: { activeTheme: any }) {
   }, []);
 
   return (
-    <section className="min-h-screen bg-black relative overflow-hidden flex items-center justify-center">
+    <section className="min-h-[65svh] py-24 bg-black relative overflow-hidden flex items-center justify-center">
       {/* Background Video */}
       <video
         ref={videoRef}
@@ -83,11 +83,12 @@ export default function CTA({ activeTheme }: { activeTheme: any }) {
         playsInline
         onTimeUpdate={handleTimeUpdate}
         onEnded={handleEnded}
-        className="absolute inset-0 w-full h-full object-cover translate-y-[17%]"
+        className="absolute inset-0 w-full h-full object-cover opacity-40"
       >
         <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_115001_bcdaa3b4-03de-47e7-ad63-ae3e392c32d4.mp4" type="video/mp4" />
       </video>
 
+      <div className="absolute inset-0 bg-black/60" />
       <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}

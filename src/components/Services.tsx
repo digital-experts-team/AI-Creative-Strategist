@@ -5,25 +5,25 @@ const services = [
   {
     headline: "Ecommerce Ad Strategy",
     items: ["Customer & Product Research", "Hooks & Offer Angles", "Ad Concepts & Scripts"],
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop",
+    image: "/images/strategy.jpg",
     color: "#6366f1", // Indigo
   },
   {
     headline: "UGC & AI Ad Production",
     items: ["UGC Video Editing", "AI Visuals & Motion", "Static & Video Ads", "Product Demonstrations"],
-    image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=800&auto=format&fit=crop",
+    image: "/images/production.jpg",
     color: "#10b981", // Emerald
   },
   {
     headline: "Creative Testing",
     items: ["Paid Social Formats", "Hook Variations", "Offer & CTA Variations", "New Angles to Test"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+    image: "/images/testing.jpg",
     color: "#f43f5e", // Rose
   },
   {
     headline: "Performance Iteration",
     items: ["Campaign Creative Reviews", "Iterations from Ad Results", "Media Buyer Collaboration", "Fresh Creative Batches"],
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop",
+    image: "/images/iteration.jpg",
     color: "#f59e0b", // Amber
   },
 ];
@@ -42,7 +42,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -56,6 +56,9 @@ export default function Services() {
                 <img 
                   src={service.image} 
                   alt={service.headline}
+                  loading="lazy"
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-60" />
@@ -73,14 +76,14 @@ export default function Services() {
 
                 <h4 
                   style={{ color: service.color }}
-                  className="text-[22px] font-bold tracking-tight mb-4"
+                  className="text-[22px] leading-tight min-h-[2.5em] font-bold tracking-tight mb-4"
                 >
                   {service.headline}
                 </h4>
 
                 <ul className="space-y-3">
                   {service.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start text-[14px] text-zinc-600 leading-tight">
+                    <li key={idx} className="flex items-start text-base text-zinc-600 leading-relaxed">
                       <Check className="w-4 h-4 mr-2 mt-0.5 shrink-0" style={{ color: service.color }} />
                       <span>{item}</span>
                     </li>

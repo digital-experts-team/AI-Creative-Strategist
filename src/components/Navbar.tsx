@@ -18,10 +18,10 @@ export default function Navbar({ activeTheme }: { activeTheme: any }) {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-8 left-0 right-0 z-50 px-6 flex justify-center"
+      className="fixed top-4 sm:top-6 left-0 right-0 z-50 px-4 sm:px-6 flex justify-center"
     >
       <div 
-        className={`flex items-center justify-between gap-8 bg-white/95 backdrop-blur-md rounded-[16px] px-8 py-3.5 w-full max-w-6xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-zinc-100 transition-all duration-300 ${
+        className={`flex items-center justify-between gap-3 sm:gap-8 bg-white/95 backdrop-blur-md rounded-[16px] px-4 sm:px-8 py-3.5 w-full max-w-6xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-zinc-100 transition-all duration-300 ${
           scrolled ? "py-2.5 scale-[0.98] bg-white" : ""
         }`}
       >
@@ -34,7 +34,7 @@ export default function Navbar({ activeTheme }: { activeTheme: any }) {
           </span>
         </a>
 
-        <nav className="hidden lg:flex items-center space-x-12">
+        <nav className="hidden lg:flex items-center space-x-8">
           <a
             href="#about"
             className="text-[14px] font-medium text-zinc-600 hover:text-zinc-900 transition-colors"
@@ -42,7 +42,7 @@ export default function Navbar({ activeTheme }: { activeTheme: any }) {
             About
           </a>
           <a
-            href="#works"
+            href="#portfolio"
             className="text-[14px] font-medium text-zinc-600 hover:text-zinc-900 transition-colors"
           >
             Works
@@ -54,18 +54,18 @@ export default function Navbar({ activeTheme }: { activeTheme: any }) {
             Services
           </a>
           <a
-            href="#testimonial"
+            href="#faq"
             className="text-[14px] font-medium text-zinc-600 hover:text-zinc-900 transition-colors"
           >
-            Testimonial
+            FAQs
           </a>
         </nav>
 
         <div className="flex items-center">
-          <button className={`hidden sm:flex items-center gap-3 px-6 py-2.5 text-sm font-semibold text-white bg-[#111] hover:bg-zinc-800 rounded-full transition-all duration-300 shadow-md`}>
-            Book A Free Meeting
+          <a href="https://wa.me/918129917227" target="_blank" rel="noopener noreferrer" className={`flex items-center gap-3 px-3 sm:px-6 py-2.5 text-xs sm:text-sm font-semibold text-white bg-[#111] hover:bg-zinc-800 rounded-full transition-all duration-300 shadow-md`}>
+            Let’s Talk
             <ArrowUpRight className="w-4 h-4" />
-          </button>
+          </a>
         </div>
       </div>
     </motion.header>

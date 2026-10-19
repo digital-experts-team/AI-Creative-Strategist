@@ -59,7 +59,10 @@ export default function Portfolio() {
               <img
                 src={gif.url}
                 alt={gif.alt}
-                className="w-full h-auto aspect-[9/16] object-cover"
+                loading="lazy"
+                width={540}
+                height={960}
+                className="block w-full h-full aspect-[9/16] object-cover object-center"
                 referrerPolicy="no-referrer"
               />
             </motion.div>

@@ -13,7 +13,7 @@ export default function Statement() {
   const y = useTransform(scrollYProgress, [0, 1], [50, 0]);
 
   return (
-    <section ref={ref} className="py-32 bg-white overflow-hidden">
+    <section id="about" ref={ref} className="py-32 bg-white overflow-hidden">
       <div className="max-w-5xl mx-auto px-6">
         <motion.h2
           style={{ filter: blur, opacity, y }}

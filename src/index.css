@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@400;500;600&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -29,4 +29,27 @@ h6 {
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 7rem; }
+body { margin: 0; font-size: 1rem; line-height: 1.6; }
+* { box-sizing: border-box; }
+img, video { max-width: 100%; }
+h1, h2, h3, h4 { text-wrap: balance; }
+p { text-wrap: pretty; }
+a, button { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, button:focus-visible { outline: 3px solid #6366f1; outline-offset: 5px; }
+.hero-section { min-height: 92svh; }
+.hero-title { font-size: clamp(2.5rem, 6.6vw, 6.25rem); line-height: 1.08; text-shadow: 0 2px 24px rgb(0 0 0 / 25%); }
+.hero-rotating { min-height: 1.2em; margin-top: .15em; }
+@media (max-width: 639px) {
+  section.py-32, section.py-24 { padding-top: 4rem; padding-bottom: 4rem; }
+  .hero-section { min-height: 88svh; }
+  .hero-title { max-width: 20ch; margin-left: auto; margin-right: auto; }
+  h2.text-4xl, h3.text-4xl { font-size: 2rem; line-height: 1.15; }
+  p.text-xl { font-size: 1.125rem; line-height: 1.6; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
