@@ -9,7 +9,7 @@ export default function Hero({ index, activeTheme }: { index: number, activeThem
         src="/images/hero-natural-dream.jpg"
         alt="Dreamlike natural lakeshore with softly blurred meadow flowers and misty distant mountains"
         fetchPriority="high"
-        className="absolute inset-0 w-full h-full object-cover object-center z-0"
+        className="absolute inset-0 w-full h-full object-cover object-left sm:object-center z-0"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-white/15 via-white/10 to-transparent" />
 
