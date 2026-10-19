@@ -1,30 +1,35 @@
 import { motion } from "motion/react";
-import { Play, Check } from "lucide-react";
+import { Target, Clapperboard, FlaskConical, TrendingUp } from "lucide-react";
+import type { CSSProperties } from "react";
 
 const services = [
   {
     headline: "Ecommerce Ad Strategy",
-    items: ["Customer & Product Research", "Hooks & Offer Angles", "Ad Concepts & Scripts"],
-    image: "/images/strategy.jpg",
-    color: "#6366f1", // Indigo
+    impact: "Give your product a clear angle, with customer research, hooks, and scripts built around why people buy.",
+    icon: Target,
+    color: "#2563eb",
+    tint: "#eff6ff",
   },
   {
     headline: "UGC & AI Ad Production",
-    items: ["UGC Video Editing", "AI Visuals & Motion", "Static & Video Ads", "Product Demonstrations"],
-    image: "/images/production.jpg",
-    color: "#10b981", // Emerald
+    impact: "Turn product benefits into UGC edits, AI visuals, and ads that bring your offer to life.",
+    icon: Clapperboard,
+    color: "#059669",
+    tint: "#ecfdf5",
   },
   {
     headline: "Creative Testing",
-    items: ["Paid Social Formats", "Hook Variations", "Offer & CTA Variations", "New Angles to Test"],
-    image: "/images/testing.jpg",
-    color: "#f43f5e", // Rose
+    impact: "Find which hooks and offers connect with your audience through focused creative variations.",
+    icon: FlaskConical,
+    color: "#e11d48",
+    tint: "#fff1f2",
   },
   {
     headline: "Performance Iteration",
-    items: ["Campaign Creative Reviews", "Iterations from Ad Results", "Media Buyer Collaboration", "Fresh Creative Batches"],
-    image: "/images/iteration.jpg",
-    color: "#f59e0b", // Amber
+    impact: "Use campaign learnings to refresh tired ads and shape your next batch of creative.",
+    icon: TrendingUp,
+    color: "#9333ea",
+    tint: "#faf5ff",
   },
 ];
 
@@ -32,8 +37,8 @@ export default function Services() {
   return (
     <section className="py-32 bg-[#f8f9fa] relative border-t border-zinc-200">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-[15px] font-black tracking-[0.2em] uppercase text-zinc-400 mb-3">WHAT WE DO</h2>
+        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
+          <h2 className="text-[15px] font-bold tracking-[0.2em] uppercase text-zinc-500 mb-3">WHAT I DO</h2>
           <h3 className="text-4xl sm:text-5xl font-bold text-zinc-900 tracking-tight mb-4">
             Creative for Ecommerce Growth.
           </h3>
@@ -43,55 +48,37 @@ export default function Services() {
         </div>
 
         <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
-              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              viewport={{ margin: "-100px", amount: 0.1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group flex flex-col items-stretch rounded-[32px] overflow-hidden bg-white border border-zinc-100 shadow-[0_8px_32px_rgba(0,0,0,0.03)] hover:shadow-2xl transition-all duration-500"
-            >
-              <div className="relative w-full aspect-[4/3] overflow-hidden bg-zinc-100">
-                <img 
-                  src={service.image} 
-                  alt={service.headline}
-                  loading="lazy"
-                  width={800}
-                  height={600}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-60" />
-              </div>
-              
-              <div className="relative pt-10 pb-8 px-6 bg-white flex-grow flex flex-col justify-start">
-                <div className="absolute -top-7 left-6 w-14 h-14 bg-white rounded-full p-1.5 shadow-xl shadow-black/5 z-20">
-                  <div 
-                    style={{ backgroundColor: service.color }}
-                    className="w-full h-full rounded-full flex items-center justify-center text-white shadow-lg transition-transform duration-300 group-hover:scale-110"
-                  >
-                    <Play className="w-4 h-4 fill-current ml-0.5" />
+          {services.map((service, index) => {
+            const Icon = service.icon;
+            return (
+              <motion.article
+                key={service.headline}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 0.4, delay: index * 0.08 }}
+                style={{ "--service-color": service.color, "--service-tint": service.tint } as CSSProperties}
+                className="service-card group flex flex-col rounded-[28px] overflow-hidden bg-white border border-zinc-200/70"
+              >
+                <div className="service-art" aria-hidden="true">
+                  <span className="service-orbit service-orbit-one" />
+                  <span className="service-orbit service-orbit-two" />
+                  <div className="service-cube">
+                    <div className="service-cube-face service-cube-front"><Icon size={44} strokeWidth={1.75} /></div>
+                    <div className="service-cube-face service-cube-top" />
+                    <div className="service-cube-face service-cube-right" />
                   </div>
+                  <span className="service-cube-shadow" />
                 </div>
-
-                <h4 
-                  style={{ color: service.color }}
-                  className="text-[22px] leading-tight min-h-[2.5em] font-bold tracking-tight mb-4"
-                >
-                  {service.headline}
-                </h4>
-
-                <ul className="space-y-3">
-                  {service.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start text-base text-zinc-600 leading-relaxed">
-                      <Check className="w-4 h-4 mr-2 mt-0.5 shrink-0" style={{ color: service.color }} />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
-          ))}
+                <div className="px-6 pt-7 pb-8 flex-1">
+                  <h4 className="service-title text-[23px] leading-tight font-bold tracking-tight mb-4 sm:min-h-[2.5em]">
+                    {service.headline}
+                  </h4>
+                  <p className="text-base text-zinc-600 leading-relaxed">{service.impact}</p>
+                </div>
+              </motion.article>
+            );
+          })}
         </div>
       </div>
     </section>
