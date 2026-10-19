@@ -47,7 +47,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-x-10 gap-y-12">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -58,24 +58,21 @@ export default function Services() {
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.4, delay: index * 0.08 }}
                 style={{ "--service-color": service.color, "--service-tint": service.tint } as CSSProperties}
-                className="service-card group flex flex-col rounded-[28px] overflow-hidden bg-white border border-zinc-200/70"
+                className="service-item group"
               >
-                <div className="service-art" aria-hidden="true">
-                  <span className="service-orbit service-orbit-one" />
-                  <span className="service-orbit service-orbit-two" />
-                  <div className="service-cube">
-                    <div className="service-cube-face service-cube-front"><Icon size={44} strokeWidth={1.75} /></div>
-                    <div className="service-cube-face service-cube-top" />
-                    <div className="service-cube-face service-cube-right" />
+                <div className="flex items-center gap-5 mb-4">
+                  <div className="service-icon" aria-hidden="true">
+                    <div className="service-cube">
+                      <div className="service-cube-face service-cube-front"><Icon size={23} strokeWidth={1.75} /></div>
+                      <div className="service-cube-face service-cube-top" />
+                      <div className="service-cube-face service-cube-right" />
+                    </div>
                   </div>
-                  <span className="service-cube-shadow" />
-                </div>
-                <div className="px-6 pt-7 pb-8 flex-1">
-                  <h4 className="service-title text-[23px] leading-tight font-bold tracking-tight mb-4 sm:min-h-[2.5em]">
+                  <h4 className="service-title text-[23px] leading-tight font-bold tracking-tight">
                     {service.headline}
                   </h4>
-                  <p className="text-base text-zinc-600 leading-relaxed">{service.impact}</p>
                 </div>
+                <p className="text-base text-zinc-600 leading-relaxed">{service.impact}</p>
               </motion.article>
             );
           })}

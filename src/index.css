@@ -54,18 +54,12 @@ a:focus-visible, button:focus-visible { outline: 3px solid #6366f1; outline-offs
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
 
-.service-card { box-shadow: 0 8px 30px rgb(9 9 11 / 3%); transition: box-shadow .3s, border-color .3s; }
-.service-card:hover { box-shadow: 0 16px 40px rgb(9 9 11 / 8%); border-color: color-mix(in srgb, var(--service-color) 30%, white); }
 .service-title { color: var(--service-color); }
-.service-art { height: 220px; position: relative; display: grid; place-items: center; isolation: isolate; background: radial-gradient(ellipse at 50% 35%, white, var(--service-tint) 75%); perspective: 700px; overflow: hidden; }
-.service-cube { position: relative; width: 96px; height: 96px; transform-style: preserve-3d; transform: translateY(-8px) rotateX(-18deg) rotateY(-28deg) rotateZ(-5deg); transition: transform .45s ease; z-index: 2; }
-.service-card:hover .service-cube { transform: translateY(-16px) rotateX(-12deg) rotateY(-18deg) rotateZ(0deg); }
-.service-cube-face { position: absolute; inset: 0; border-radius: 12px; backface-visibility: hidden; border: 1px solid rgb(255 255 255 / 25%); }
-.service-cube-front { display: grid; place-items: center; color: white; background: linear-gradient(140deg, color-mix(in srgb, var(--service-color) 75%, white), var(--service-color)); transform: translateZ(48px); box-shadow: inset 0 2px 3px rgb(255 255 255 / 30%), inset 0 -3px 8px rgb(0 0 0 / 8%); }
-.service-cube-front svg { filter: drop-shadow(0 2px 2px rgb(0 0 0 / 12%)); }
-.service-cube-top { background: color-mix(in srgb, var(--service-color) 55%, white); transform: rotateX(90deg) translateZ(48px); }
-.service-cube-right { background: color-mix(in srgb, var(--service-color) 82%, black); transform: rotateY(90deg) translateZ(48px); }
-.service-cube-shadow { position: absolute; bottom: 32px; width: 110px; height: 18px; background: var(--service-color); opacity: .18; border-radius: 50%; filter: blur(10px); }
-.service-orbit { position: absolute; border: 1px solid color-mix(in srgb, var(--service-color) 12%, transparent); border-radius: 50%; width: 180px; height: 180px; }
-.service-orbit-two { width: 260px; height: 260px; }
-@media (prefers-reduced-motion: reduce) { .service-card:hover .service-cube { transform: translateY(-8px) rotateX(-18deg) rotateY(-28deg) rotateZ(-5deg); } }
+.service-icon { width: 52px; height: 60px; flex-shrink: 0; display: grid; place-items: center; perspective: 350px; }
+.service-cube { position: relative; width: 36px; height: 36px; transform-style: preserve-3d; transform: rotateX(-18deg) rotateY(-28deg) rotateZ(-5deg); transition: transform .3s ease; }
+.service-item:hover .service-cube { transform: translateY(-3px) rotateX(-12deg) rotateY(-18deg); }
+.service-cube-face { position: absolute; inset: 0; border-radius: 5px; backface-visibility: hidden; border: 1px solid rgb(255 255 255 / 25%); }
+.service-cube-front { display: grid; place-items: center; color: white; background: linear-gradient(140deg, color-mix(in srgb, var(--service-color) 75%, white), var(--service-color)); transform: translateZ(18px); box-shadow: inset 0 1px 2px rgb(255 255 255 / 30%); }
+.service-cube-top { background: color-mix(in srgb, var(--service-color) 55%, white); transform: rotateX(90deg) translateZ(18px); }
+.service-cube-right { background: color-mix(in srgb, var(--service-color) 82%, black); transform: rotateY(90deg) translateZ(18px); }
+@media (prefers-reduced-motion: reduce) { .service-item:hover .service-cube { transform: rotateX(-18deg) rotateY(-28deg) rotateZ(-5deg); } }
