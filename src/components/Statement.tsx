@@ -19,9 +19,9 @@ export default function Statement() {
           style={{ filter: blur, opacity, y }}
           className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-zinc-900 leading-[1.2] text-center tracking-tight max-w-4xl mx-auto"
         >
-          I produce high-converting ad creatives behind your Agencies —{" "}
+          I create UGC and AI ad creative for ecommerce brands,{" "}
           <span className="text-zinc-400">
-            so you can scale without building a full in-house creative department.
+            with product stories, fresh hooks, and variations your performance marketing team can test.
           </span>
         </motion.h2>
       </div>

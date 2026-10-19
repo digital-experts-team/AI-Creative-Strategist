@@ -3,26 +3,26 @@ import { Play, Check } from "lucide-react";
 
 const services = [
   {
-    headline: "Winning Ad Strategy",
-    items: ["Hooks Development", "Angle Discovery", "Ad Concepting & Copy"],
+    headline: "Ecommerce Ad Strategy",
+    items: ["Customer & Product Research", "Hooks & Offer Angles", "Ad Concepts & Scripts"],
     image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop",
     color: "#6366f1", // Indigo
   },
   {
-    headline: "High-CTR Production",
-    items: ["Static Ad Designs", "Motion Graphics Ads", "UGC Video Production", "Product Showcases"],
+    headline: "UGC & AI Ad Production",
+    items: ["UGC Video Editing", "AI Visuals & Motion", "Static & Video Ads", "Product Demonstrations"],
     image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=800&auto=format&fit=crop",
     color: "#10b981", // Emerald
   },
   {
-    headline: "Rapid Creative Testing",
-    items: ["Format Variations", "Different Hooks testing", "Multiple CTA iterations", "New Angles validation"],
+    headline: "Creative Testing",
+    items: ["Paid Social Formats", "Hook Variations", "Offer & CTA Variations", "New Angles to Test"],
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
     color: "#f43f5e", // Rose
   },
   {
-    headline: "Seamless Meta Scaling",
-    items: ["Launch-ready ad files", "Performance-optimized exports", "Media-buyer-friendly formats", "Rapid creative scaling"],
+    headline: "Performance Iteration",
+    items: ["Campaign Creative Reviews", "Iterations from Ad Results", "Media Buyer Collaboration", "Fresh Creative Batches"],
     image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop",
     color: "#f59e0b", // Amber
   },
@@ -35,10 +35,10 @@ export default function Services() {
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-[15px] font-black tracking-[0.2em] uppercase text-zinc-400 mb-3">WHAT WE DO</h2>
           <h3 className="text-4xl sm:text-5xl font-bold text-zinc-900 tracking-tight mb-4">
-            Your Invisible Creative Department.
+            Creative for Ecommerce Growth.
           </h3>
           <p className="text-xl text-zinc-500">
-            Everything delivered under your agency's brand.
+            UGC, AI ads, and creative testing for ecommerce brands and their performance marketing teams.
           </p>
         </div>
 

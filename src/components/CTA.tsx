@@ -96,7 +96,7 @@ export default function CTA({ activeTheme }: { activeTheme: any }) {
           transition={{ duration: 0.5 }}
           className="text-4xl sm:text-5xl font-bold text-white mb-10"
         >
-          Ready to Talk?
+          Ready for Your Next Ad Creative?
         </motion.h2>
 
         <motion.div
@@ -107,7 +107,7 @@ export default function CTA({ activeTheme }: { activeTheme: any }) {
           className="flex flex-col sm:flex-row items-center justify-center gap-6"
         >
           <a href="https://wa.me/918129917227" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center justify-center px-8 py-4 text-lg font-semibold ${activeTheme.color} bg-white hover:bg-zinc-50 rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl group w-full sm:w-auto`}>
-            Contact Now
+            Discuss Your Brand
             <MessageCircle className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform" />
           </a>
 
@@ -116,7 +116,7 @@ export default function CTA({ activeTheme }: { activeTheme: any }) {
             className="inline-flex items-center text-zinc-300 hover:text-white transition-colors duration-300 font-medium group"
           >
             <Mail className="w-5 h-5 mr-2 opacity-70 group-hover:opacity-100 transition-opacity" />
-            Or send me a quick brief by email
+            Or email your store link and creative brief
           </a>
         </motion.div>
       </div>

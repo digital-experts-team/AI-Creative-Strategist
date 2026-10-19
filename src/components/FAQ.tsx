@@ -4,9 +4,9 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "How does the 'Invisible Creative Department' model work?",
+    question: "Do you work with ecommerce brands and agencies?",
     answer:
-      "I function as your white-label creative partner. You manage the client relationship, and I deliver all strategy, production, and testing assets under your agency's brand name.",
+      "Yes. I work directly with ecommerce founders and growth teams, and support performance agencies as a white-label creative partner.",
   },
   {
     question: "What is your typical turnaround time for ad creatives?",
@@ -14,19 +14,19 @@ const faqs = [
       "I deliver initial concepts and hooks within 3–5 business days. Once approved, production and variation testing assets are delivered in 5–7 business days.",
   },
   {
-    question: "Do you collaborate directly with our media buyers?",
+    question: "How do UGC and AI fit into your ad production?",
     answer:
-      "Yes, I can communicate directly with your media buyers (or through you on Slack/email) to align creative direction with live performance data and CTR metrics.",
+      "UGC edits bring product demonstrations and creator footage into your ads. AI supports visual concepts, product scenes, and variations. The approach depends on your product, brand, and available assets.",
   },
   {
-    question: "What assets do you deliver for creative testing?",
+    question: "How do you support performance marketing?",
     answer:
-      "I deliver distinct hooks, body angle variations, call-to-actions (CTAs), and static/motion options so you can systematically test and isolate winning performance variables.",
+      "I collaborate with your media buyer on hooks, angles, and creative variations. When campaign data is available, we use it to guide the next batch of ads. The focus is creative strategy and production; your team manages media buying.",
   },
   {
-    question: "Is there a contract or commitment?",
+    question: "Can we start with one project?",
     answer:
-      "I offer flexible monthly creative retainers and pay-per-project models to scale up or down as your agency's client load fluctuates.",
+      "Yes. I offer individual projects and monthly creative retainers. We agree on the formats, number of variations, and production scope before work begins.",
   },
 ];
 

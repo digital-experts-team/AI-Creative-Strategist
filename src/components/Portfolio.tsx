@@ -41,7 +41,7 @@ export default function Portfolio() {
         <div className="mb-12">
           <h2 className="text-4xl font-bold text-zinc-900 mb-4">Portfolio</h2>
           <p className="text-xl text-zinc-600">
-            Recent Work (Meta Ads, UGC & Cinematic Films)
+            UGC, AI Ad Creative & Ecommerce Product Videos
           </p>
         </div>
 
@@ -68,7 +68,7 @@ export default function Portfolio() {
 
         <div className="text-center">
           <a href="https://drive.google.com/drive/folders/1Y_uzf708nWsXduL-aokTh7dhmBSHvQSq?usp=drive_link" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-zinc-700 bg-white hover:bg-zinc-50 border border-zinc-200 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md">
-            View Full Portfolio
+            Explore Ad Creative
           </a>
         </div>
       </div>

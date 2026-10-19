@@ -57,7 +57,7 @@ export default function Hero({ index, activeTheme }: { index: number, activeThem
             className={`inline-flex items-center justify-center px-10 py-5 text-base font-semibold text-white ${activeTheme.bg} hover:scale-105 rounded-full transition-all duration-300 shadow-xl ${activeTheme.shadow} group w-full sm:w-auto`}
           >
             <Play className="mr-2 w-4 h-4 fill-current transition-transform group-hover:scale-110" />
-            Watch Videos
+            See Ad Creative
           </a>
           <a 
             href="https://wa.me/918129917227" 
@@ -66,7 +66,7 @@ export default function Hero({ index, activeTheme }: { index: number, activeThem
             className="inline-flex items-center justify-center px-10 py-5 text-base font-semibold text-zinc-900 bg-white border-2 border-white hover:bg-zinc-100 rounded-full transition-all duration-300 group shadow-sm w-full sm:w-auto"
           >
             <Play className="mr-2 w-4 h-4 fill-current transition-transform group-hover:scale-110" />
-            Contact Now
+            Discuss Your Brand
           </a>
         </motion.div>
       </div>
