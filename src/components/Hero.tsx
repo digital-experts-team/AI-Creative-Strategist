@@ -6,12 +6,12 @@ export default function Hero({ index, activeTheme }: { index: number, activeThem
   return (
     <section className="hero-section relative flex items-center justify-center pt-36 pb-20 overflow-hidden bg-zinc-950">
       <img
-        src="/images/hero-surreal.jpg"
-        alt="Surreal flower-covered islands and a tranquil lake beneath an open blue sky"
+        src="/images/hero-natural-dream.jpg"
+        alt="Dreamlike natural lakeshore with softly blurred meadow flowers and misty distant mountains"
         fetchPriority="high"
         className="absolute inset-0 w-full h-full object-cover object-center z-0"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-slate-950/10 to-slate-950/25" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white/15 via-white/10 to-transparent" />
 
       <div className="max-w-5xl mx-auto px-6 w-full flex flex-col items-center text-center relative z-10">
         <motion.h1 
