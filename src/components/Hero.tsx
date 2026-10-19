@@ -6,8 +6,8 @@ export default function Hero({ index, activeTheme }: { index: number, activeThem
   return (
     <section className="hero-section relative flex items-center justify-center pt-36 pb-20 overflow-hidden bg-zinc-950">
       <img
-        src="/images/hero-natural-dream.jpg"
-        alt="Dreamlike natural lakeshore with softly blurred meadow flowers and misty distant mountains"
+        src="/images/hero-original-frame.jpg"
+        alt="Flower-covered dream landscape reflected in water, captured from the original hero video"
         fetchPriority="high"
         className="absolute inset-0 w-full h-full object-cover object-left sm:object-center z-0"
       />
