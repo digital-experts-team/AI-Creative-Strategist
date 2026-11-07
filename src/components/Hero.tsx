@@ -37,10 +37,6 @@ export default function Hero({ index, activeTheme }: { index: number, activeThem
             </AnimatePresence>
           </span>
         </motion.h1>
-        <p className="mb-7 max-w-xl rounded-xl bg-white/90 px-4 py-3 text-base font-medium leading-relaxed text-slate-900 sm:text-lg">
-          I own Meta growth for DTC brands and agency clients, from AI and UGC ad production to creative testing, retargeting, and spend decisions.
-        </p>
-
         <motion.div 
           initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}

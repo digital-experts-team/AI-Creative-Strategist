@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
-import Statement from "./components/Statement";
+import Statement, { RecentWorkStatement } from "./components/Statement";
 import Portfolio from "./components/Portfolio";
 import FAQ from "./components/FAQ";
 import CTA from "./components/CTA";
@@ -30,6 +30,7 @@ export default function App() {
         {pathname === "/" ? <>
         <Hero index={index} activeTheme={activeTheme} />
         <Statement />
+        <RecentWorkStatement />
         <div id="services">
           <Services />
         </div>
