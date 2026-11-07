@@ -18,7 +18,7 @@ export default function Hero({ index, activeTheme }: { index: number, activeThem
       <div className="absolute inset-0 bg-gradient-to-b from-white/15 via-white/10 to-transparent" />
 
       <div className="max-w-5xl mx-auto px-6 w-full flex flex-col items-center justify-between gap-16 text-center sm:justify-center sm:gap-10 relative z-10">
-        <div className="w-full">
+        <div className="w-full translate-y-[32px] lg:translate-y-[-32px]">
         <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-slate-950 sm:text-sm">Tibin Jacob</p>
         <motion.h1 
           initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
