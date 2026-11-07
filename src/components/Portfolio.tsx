@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 const shortFormGifs: { id: number; url: string; alt: string; videoUrl?: string }[] = [
   { id: 3, url: "https://i.ibb.co/1Gj0VRNM/UGC-Serum-ezgif-com-video-to-gif-converter.gif", alt: "Serum Brand · UK", videoUrl: "https://res.cloudinary.com/drzbibtmm/video/upload/v1794079530/portfolio/serum-ad.mp4" },
-  { id: 2, url: "https://i.ibb.co/xKBF7nq4/Generative-AI.gif", alt: "Paper Boat · India" },
+  { id: 2, url: "https://i.ibb.co/4gfp1HYf/Paperboat-guava-ezgif-com-video-to-gif-converter.gif", alt: "Paper Boat · India" },
   { id: 1, url: "https://i.ibb.co/PvsvnHVx/clideo-editor-a489ac75a9ce461c883403c5a755104e-ezgif-com-crop.gif", alt: "Lipheist · Dubai", videoUrl: "https://res.cloudinary.com/drzbibtmm/video/upload/v1794079531/portfolio/lipheist-ad.mp4" },
   { id: 4, url: "https://i.ibb.co/BH8kBTs4/Ecommerce-Brand.gif", alt: "Glossier · USA", videoUrl: "https://res.cloudinary.com/drzbibtmm/video/upload/v1794079530/portfolio/glossier-ad.mp4" },
 ];
