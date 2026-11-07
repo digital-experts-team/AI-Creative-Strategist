@@ -10,6 +10,8 @@ const shortFormGifs = [
 const cases = [
   {
     slug: "one-product-two-reasons",
+    preview: shortFormGifs[3].url,
+    highlights: ["Two ad angles", "Three-phase retargeting"],
     label: "Sample walkthrough",
     title: "One Product, Two Reasons to Buy",
     intro: "Two ads for the same premium carry-on. Which reason to buy deserves the next round of spend?",
@@ -23,6 +25,8 @@ const cases = [
   },
   {
     slug: "when-clicks-hold",
+    preview: shortFormGifs[0].url,
+    highlights: ["Meta + Shopify signals", "n8n alert routing"],
     label: "Workflow demo",
     title: "When Clicks Hold but Orders Fall",
     intro: "A Meta and Shopify workflow that helps the team decide where to investigate before it moves budget.",
@@ -71,14 +75,21 @@ export default function Portfolio() {
           ))}
         </div>
 
-        <div id="case-studies" aria-label="Case studies" className="mb-10 flex scroll-mt-40 flex-col gap-5 md:flex-row">
-          {cases.map(({ slug, label, title, intro, sections }) => (
-            <article key={slug} id={slug} className="min-w-0 flex-1 scroll-mt-40 rounded-2xl border border-zinc-200 bg-zinc-50 p-6 sm:p-8">
+        <div id="case-studies" aria-label="Case studies" className="mb-10 flex items-start scroll-mt-40 flex-col gap-5 md:flex-row">
+          {cases.map(({ slug, label, title, intro, sections, preview, highlights }) => (
+            <article key={slug} id={slug} className="w-full min-w-0 flex-1 scroll-mt-40 overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50">
+              <div className="aspect-video overflow-hidden bg-zinc-100">
+                <img src={preview} alt="" loading="lazy" referrerPolicy="no-referrer" className="h-full w-full object-cover object-center" />
+              </div>
+              <div className="p-6 sm:p-8">
               <p className="text-sm font-semibold text-blue-700">{label}</p>
               <h3 className="mt-2 text-2xl font-bold text-zinc-900">{title}</h3>
               <p className="mt-3 text-zinc-600">{intro}</p>
+              <ul aria-label="Case highlights" className="mt-4 flex flex-wrap gap-2">
+                {highlights.map(highlight => <li key={highlight} className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-800">{highlight}</li>)}
+              </ul>
               <details className="mt-5">
-                <summary className="cursor-pointer font-semibold text-blue-700">Read the case</summary>
+                <summary className="inline-flex cursor-pointer list-none rounded-full bg-zinc-900 px-4 py-2 text-sm font-semibold text-white hover:bg-zinc-700 [&::-webkit-details-marker]:hidden">Read Case Study</summary>
                 <dl className="mt-4 space-y-4 text-sm leading-relaxed text-zinc-600">
                   {sections.map(([heading, copy]) => (
                     <div key={heading}>
@@ -88,15 +99,8 @@ export default function Portfolio() {
                   ))}
                 </dl>
               </details>
+              </div>
             </article>
-          ))}
-        </div>
-
-        <div aria-label="Upcoming GIF previews" className="mb-10 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4">
-          {[1, 2, 3, 4].map(slot => (
-            <div key={slot} className="grid aspect-[9/16] place-items-center rounded-xl border border-dashed border-zinc-300 bg-zinc-50 text-sm font-medium text-zinc-500">
-              GIF preview
-            </div>
           ))}
         </div>
 
