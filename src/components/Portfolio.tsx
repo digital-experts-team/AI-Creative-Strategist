@@ -1,16 +1,26 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { flushSync } from "react-dom";
 import { Play, X } from "lucide-react";
 import { motion } from "motion/react";
 
-const shortFormGifs: { id: number; url: string; alt: string; driveVideoId?: string }[] = [
-  { id: 3, url: "https://i.ibb.co/1Gj0VRNM/UGC-Serum-ezgif-com-video-to-gif-converter.gif", alt: "Serum Brand · UK", driveVideoId: "1v6-d3wrxn1lmokyBj96bLl16YOf9mdtZ" },
+const shortFormGifs: { id: number; url: string; alt: string; videoUrl?: string }[] = [
+  { id: 3, url: "https://i.ibb.co/1Gj0VRNM/UGC-Serum-ezgif-com-video-to-gif-converter.gif", alt: "Serum Brand · UK", videoUrl: "https://res.cloudinary.com/drzbibtmm/video/upload/v1794079530/portfolio/serum-ad.mp4" },
   { id: 2, url: "https://i.ibb.co/xKBF7nq4/Generative-AI.gif", alt: "Paper Boat · India" },
-  { id: 1, url: "https://i.ibb.co/PvsvnHVx/clideo-editor-a489ac75a9ce461c883403c5a755104e-ezgif-com-crop.gif", alt: "Lipheist · Dubai", driveVideoId: "17EeleCYgko-pBjYA_nafpRrVOU-NW1pB" },
-  { id: 4, url: "https://i.ibb.co/BH8kBTs4/Ecommerce-Brand.gif", alt: "Glossier · USA", driveVideoId: "15_M74Niid72qZRDB_yGnGbJaLvo58an6" },
+  { id: 1, url: "https://i.ibb.co/PvsvnHVx/clideo-editor-a489ac75a9ce461c883403c5a755104e-ezgif-com-crop.gif", alt: "Lipheist · Dubai", videoUrl: "https://res.cloudinary.com/drzbibtmm/video/upload/v1794079531/portfolio/lipheist-ad.mp4" },
+  { id: 4, url: "https://i.ibb.co/BH8kBTs4/Ecommerce-Brand.gif", alt: "Glossier · USA", videoUrl: "https://res.cloudinary.com/drzbibtmm/video/upload/v1794079530/portfolio/glossier-ad.mp4" },
 ];
 
 export default function Portfolio() {
   const [activeVideo, setActiveVideo] = useState<number | null>(null);
+  const player = useRef<HTMLVideoElement>(null);
+
+  function playVideo(id: number) {
+    flushSync(() => setActiveVideo(id));
+    void player.current?.play().catch(() => {
+      // The visible native controls let the visitor retry playback.
+    });
+  }
+
   return (
     <section className="py-24 bg-white relative border-t border-zinc-200">
       <div className="max-w-7xl mx-auto px-6">
@@ -32,45 +42,29 @@ export default function Portfolio() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative rounded-[12px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_0_40px_rgba(99,102,241,0.25)] transition-shadow duration-500 bg-zinc-100"
             >
-              {gif.driveVideoId && activeVideo === gif.id ? (
-                <div className="relative aspect-[9/16] bg-black">
-                  <iframe
-                    title={gif.alt + " video"}
-                    src={`https://drive.google.com/file/d/${gif.driveVideoId}/preview`}
-                    allow="autoplay; fullscreen"
-                    allowFullScreen
-                    className="absolute inset-0 h-full w-full border-0"
-                  />
-                  <button type="button" aria-label="Close video" onClick={() => setActiveVideo(null)} className="absolute bottom-2 right-2 rounded-full bg-black p-2 text-white">
-                    <X size={18} />
-                  </button>
-                </div>
-              ) : gif.driveVideoId ? (
-                <button type="button" aria-label={`Play ${gif.alt}`} onClick={() => setActiveVideo(gif.id)} className="relative block w-full focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-white">
-                  <img
-                src={gif.url}
-                alt={gif.alt}
-                loading="lazy"
-                width={540}
-                height={960}
-                className="block w-full aspect-[9/16] object-cover object-center"
-                referrerPolicy="no-referrer"
-              />
-                  <span className="pointer-events-none absolute inset-0 grid place-items-center">
-                    <span className="rounded-full bg-black/65 p-3 text-white"><Play aria-hidden="true" size={22} fill="currentColor" /></span>
-                  </span>
-                </button>
-              ) : (
+              <div className="relative aspect-[9/16]">
                 <img
-                src={gif.url}
-                alt={gif.alt}
-                loading="lazy"
-                width={540}
-                height={960}
-                className="block w-full aspect-[9/16] object-cover object-center"
-                referrerPolicy="no-referrer"
-              />
-              )}
+                  src={gif.url}
+                  alt={gif.alt}
+                  loading="lazy"
+                  width={540}
+                  height={960}
+                  className="absolute inset-0 h-full w-full object-cover object-center"
+                  referrerPolicy="no-referrer"
+                />
+                {gif.videoUrl && (activeVideo === gif.id ? (
+                  <div className="absolute inset-0 bg-black">
+                    <video ref={player} src={gif.videoUrl} aria-label={gif.alt + " video"} controls playsInline className="h-full w-full object-contain" />
+                    <button type="button" aria-label="Close video" onClick={() => setActiveVideo(null)} className="absolute right-2 top-2 rounded-full bg-black/75 p-2 text-white">
+                      <X size={18} aria-hidden="true" />
+                    </button>
+                  </div>
+                ) : (
+                  <button type="button" aria-label={`Play ${gif.alt}`} onClick={() => playVideo(gif.id)} className="absolute inset-0 grid w-full place-items-center focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-white">
+                    <span className="rounded-full bg-black/65 p-3 text-white"><Play aria-hidden="true" size={22} fill="currentColor" /></span>
+                  </button>
+                ))}
+              </div>
               <p className="px-4 py-3 text-sm font-semibold text-zinc-800">{gif.alt}</p>
             </motion.div>
           ))}
