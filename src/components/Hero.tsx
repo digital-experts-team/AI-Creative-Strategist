@@ -14,15 +14,18 @@ export default function Hero({ index, activeTheme }: { index: number, activeThem
       <div className="absolute inset-0 bg-gradient-to-b from-white/15 via-white/10 to-transparent" />
 
       <div className="max-w-5xl mx-auto px-6 w-full flex flex-col items-center text-center relative z-10">
+        <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-slate-950 sm:text-sm">Tibin Jacob</p>
         <motion.h1 
           initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="hero-title font-semibold tracking-[-0.04em] text-slate-950 mb-5 w-full"
+          className="font-semibold tracking-[-0.04em] text-slate-950 mb-5 w-full"
         >
-          <span className="block">D2C Growth Expert</span>
-          <span className={`mt-2 grid font-display font-bold text-[clamp(1.4rem,5vw,3.5rem)] leading-tight tracking-tight ${activeTheme.color}`}>
-            <span aria-hidden="true" className="invisible col-start-1 row-start-1">{phrases[2].text}</span>
+          <span className="block text-[clamp(1.5rem,4.5vw,4rem)] leading-tight">D2C Growth Expert</span>
+          <span className={`mt-2 grid font-display font-bold text-[clamp(2.1rem,6vw,5.25rem)] leading-tight tracking-tight ${activeTheme.color}`}>
+            {phrases.map(({ text }) => (
+              <span key={text} aria-hidden="true" className="invisible col-start-1 row-start-1">{text}</span>
+            ))}
             <AnimatePresence mode="wait">
               <motion.span
                 key={index}
