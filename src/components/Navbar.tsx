@@ -36,7 +36,7 @@ export default function Navbar({ activeTheme }: { activeTheme: any }) {
 
         <nav aria-label="Main navigation" className="order-last flex w-full flex-wrap items-center gap-x-5 gap-y-2 lg:order-none lg:w-auto">
           <a
-            href="/case-studies/"
+            href="/#case-studies"
             className="text-[14px] font-medium text-zinc-600 hover:text-zinc-900 transition-colors"
           >
             Case Studies

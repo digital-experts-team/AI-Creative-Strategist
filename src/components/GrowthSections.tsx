@@ -1,34 +1,7 @@
+import { useEffect } from "react";
 import type { ReactNode } from "react";
 
 const linkedIn = "https://www.linkedin.com/in/tibinjacob/";
-const cases = [
-  {
-    slug: "one-product-two-reasons",
-    label: "Sample walkthrough",
-    title: "One Product, Two Reasons to Buy",
-    intro: "Two ads for the same premium carry-on. Which reason to buy deserves the next round of spend?",
-    sections: [
-      ["The decision", "I’d test whether shoppers respond more to confidence that everything fits or confidence that the bag is worth keeping for years. I’d keep the product, price, and destination consistent."],
-      ["My role", "In this sample I’d write both briefs, produce the variants, launch the Meta test, and read ad performance alongside Shopify orders."],
-      ["Two creative briefs", "The weekend packing ad shows a real packing list fitting in the bag. The durability ad shows the parts that wear out first and what makes this bag worth its price. Each asset is built around a different buying reason."],
-      ["Three-phase retargeting", "Reconnect with the use case, answer a likely doubt with a relevant comparison, then clarify delivery or returns. I’d adapt the sequence to what shoppers saw and the volume available."],
-      ["The next move", "If clicks hold but orders fall, I’d check the product page, offer, and tracking. I’d fund the stronger angle once purchase volume and acquisition cost support the decision."],
-    ],
-  },
-  {
-    slug: "when-clicks-hold",
-    label: "Workflow demo",
-    title: "When Clicks Hold but Orders Fall",
-    intro: "A Meta and Shopify workflow that helps the team decide where to investigate before it moves budget.",
-    sections: [
-      ["The decision", "Steady clicks alongside fewer purchases tells me to look beyond the ad. I’d check whether the offer, product page, checkout, or tracking changed in the same window."],
-      ["My role", "I built an n8n demo that reads campaign and store signals, attaches the evidence, and assigns the follow-up. This walkthrough uses sample data."],
-      ["Example alert", "Clicks are steady and Shopify purchases have fallen. Send the affected ads, landing page, and comparison window to the offer or product page owner. Ask them to check for recent changes and report what they find."],
-      ["The next move", "If Meta and Shopify purchases also diverge beyond their usual gap, route a tracking check and hold the budget recommendation. The media buyer reviews any proposed change before it is applied."],
-    ],
-  },
-];
-
 const briefs = [
   {
     category: "Paid Social · July 2025",
@@ -63,32 +36,12 @@ function Page({ label, title, intro, children }: { label: string; title: string;
 }
 
 export function InnerPage({ pathname }: { pathname: string }) {
-  if (pathname === "/case-studies") {
-    return <Page label="Case Studies" title="Inside the Growth Decisions" intro="How I choose what to test, decide what shoppers should see next, and work out when an account is ready for more spend.">
-      <div className="grid gap-5 md:grid-cols-2">
-        {cases.map(item => <article key={item.slug} className={cardStyle}>
-          <p className="text-sm font-semibold text-blue-700">{item.label}</p>
-          <h2 className="mt-2 text-2xl font-bold">{item.title}</h2>
-          <p className="my-4 text-zinc-600">{item.intro}</p>
-          <a className={linkStyle} href={`/case-studies/${item.slug}/`}>Read the case</a>
-        </article>)}
-      </div>
-    </Page>;
-  }
+  const legacyCasePage = pathname === "/case-studies" || pathname.startsWith("/case-studies/");
+  useEffect(() => {
+    if (legacyCasePage) window.location.replace("/#case-studies");
+  }, [legacyCasePage]);
 
-  const study = cases.find(item => pathname === `/case-studies/${item.slug}`);
-  if (study) {
-    return <Page label={study.label} title={study.title} intro={study.intro}>
-      <div className="max-w-3xl space-y-7">
-        {study.sections.map(([heading, copy]) => <section key={heading} className={cardStyle}>
-          <h2 className="mb-2 text-xl font-bold">{heading}</h2>
-          <p className="leading-relaxed text-zinc-600">{copy}</p>
-        </section>)}
-        <a className={linkStyle} href="/#contact">Walk Through a Product With Me</a>
-        <p><a className={linkStyle} href="/case-studies/">All case studies</a></p>
-      </div>
-    </Page>;
-  }
+  if (legacyCasePage) return null;
 
   if (pathname === "/news") {
     return <Page label="News" title="D2C Growth Briefs" intro="Platform changes that matter to ecommerce teams and what I’d check in the account.">
