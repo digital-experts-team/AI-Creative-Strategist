@@ -39,9 +39,9 @@ export default function Portfolio() {
     <section className="py-24 bg-white relative border-t border-zinc-200">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-12">
-          <h2 className="text-4xl font-bold text-zinc-900 mb-4">Portfolio</h2>
+          <h2 className="text-4xl font-bold text-zinc-900 mb-4">Selected D2C Ad Work</h2>
           <p className="text-xl text-zinc-600">
-            UGC, AI Ad Creative & Ecommerce Product Videos
+            AI product scenes, UGC edits, and paid social ads. Pick a piece and I’ll walk you through the brief behind it, how I’d test it, and what I’d run next.
           </p>
         </div>
 

@@ -19,9 +19,9 @@ export default function Statement() {
           style={{ filter: blur, opacity, y }}
           className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-zinc-900 leading-[1.2] text-center tracking-tight max-w-4xl mx-auto"
         >
-          I create UGC and AI ad creative for ecommerce brands,{" "}
+          I help D2C brands find what sells, build the ads to test it, and run the Meta campaigns that prove where to spend next.{" "}
           <span className="text-zinc-400">
-            with product stories, fresh hooks, and variations your performance marketing team can test.
+            I’ve developed my own methods for finding the message that earns the first click, deciding what a shopper should see next, and spotting when a campaign is ready for more budget.
           </span>
         </motion.h2>
       </div>

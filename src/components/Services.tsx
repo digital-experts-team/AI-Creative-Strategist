@@ -4,29 +4,29 @@ import type { CSSProperties } from "react";
 
 const services = [
   {
-    headline: "Ecommerce Ad Strategy",
-    impact: "Give your product a clear angle, with customer research, hooks, and scripts built around why people buy.",
+    headline: "The Reason-to-Buy Map",
+    impact: "I look for the moment a product becomes worth buying and the doubt that can stop the sale. I turn those findings into separate ad angles for the same product.",
     icon: Target,
     color: "#2563eb",
     tint: "#eff6ff",
   },
   {
-    headline: "UGC & AI Ad Production",
-    impact: "Turn product benefits into UGC edits, AI visuals, and ads that bring your offer to life.",
+    headline: "The First-Batch Test",
+    impact: "I build the first batch of AI and UGC ads around decisions I need to make on Meta. Each concept earns its place by answering a different question.",
     icon: Clapperboard,
     color: "#059669",
     tint: "#ecfdf5",
   },
   {
-    headline: "Creative Testing",
-    impact: "Find which hooks and offers connect with your audience through focused creative variations.",
+    headline: "Three-Phase Retargeting",
+    impact: "I plan three phases of follow-up based on what shoppers have already seen and what they may still need to see before buying.",
     icon: FlaskConical,
     color: "#e11d48",
     tint: "#fff1f2",
   },
   {
-    headline: "Performance Iteration",
-    impact: "Use campaign learnings to refresh tired ads and shape your next batch of creative.",
+    headline: "The Spend Decision",
+    impact: "I read Meta and Shopify together to decide what to refresh, hold, or scale. My n8n workflows surface changes and route the evidence before a budget decision.",
     icon: TrendingUp,
     color: "#9333ea",
     tint: "#faf5ff",
@@ -38,12 +38,12 @@ export default function Services() {
     <section className="py-32 bg-[#f8f9fa] relative border-t border-zinc-200">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
-          <h2 className="text-[15px] font-bold tracking-[0.2em] uppercase text-zinc-500 mb-3">WHAT I DO</h2>
+          <h2 className="text-[15px] font-bold tracking-[0.2em] uppercase text-zinc-500 mb-3">HOW I WORK</h2>
           <h3 className="text-4xl sm:text-5xl font-bold text-zinc-900 tracking-tight mb-4">
-            Creative for Ecommerce Growth.
+            My D2C Growth Playbook
           </h3>
           <p className="text-xl text-zinc-500">
-            UGC, AI ads, and creative testing for ecommerce brands and their performance marketing teams.
+            Four methods I use to take a product from its first ad test to its next growth decision.
           </p>
         </div>
 

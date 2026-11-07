@@ -4,29 +4,29 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "Do you work with ecommerce brands and agencies?",
+    question: "Can you own growth for a brand or an agency client?",
     answer:
-      "Yes. I work directly with ecommerce founders and growth teams, and support performance agencies as a white-label creative partner.",
+      "Yes. I can own the work from product research and creative production through Meta campaign management, retargeting, and spend decisions. I can do that directly for a brand or within an agency’s paid social team.",
   },
   {
-    question: "What is your typical turnaround time for ad creatives?",
+    question: "What would you do first on our account?",
     answer:
-      "I deliver initial concepts and hooks within 3–5 business days. Once approved, production and variation testing assets are delivered in 5–7 business days.",
+      "I’d take one product, look at the ads already getting spend, and check what happens on the store after the click. From there, I’d show you the first batch I’d make and the decision each ad would help me make.",
   },
   {
-    question: "How do UGC and AI fit into your ad production?",
+    question: "What makes your three-phase retargeting different?",
     answer:
-      "UGC edits bring product demonstrations and creator footage into your ads. AI supports visual concepts, product scenes, and variations. The approach depends on your product, brand, and available assets.",
+      "I decide what each follow-up ad needs to accomplish based on where the shopper showed interest. In a walkthrough, I can show how I’d sequence the ads for your product and what would make me change the order.",
   },
   {
-    question: "How do you support performance marketing?",
+    question: "Do you work beyond Meta?",
     answer:
-      "I collaborate with your media buyer on hooks, angles, and creative variations. When campaign data is available, we use it to guide the next batch of ads. The focus is creative strategy and production; your team manages media buying.",
+      "I also scope ChatGPT Ads pilots for D2C products, with a clear test objective and a plan for deciding whether the channel deserves more spend.",
   },
   {
-    question: "Can we start with one project?",
+    question: "What can we cover in a first conversation?",
     answer:
-      "Yes. I offer individual projects and monthly creative retainers. We agree on the formats, number of variations, and production scope before work begins.",
+      "Bring a product link, an active ad, or a client brief. I’ll show you what I’d test first, what I’d run next, and what I’d need to see before putting more budget behind it.",
   },
 ];
 

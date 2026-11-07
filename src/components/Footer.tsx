@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="py-12 bg-white border-t border-zinc-200">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="text-zinc-500 text-sm">
-          &copy; {new Date().getFullYear()} Tibin Jacob — AI Creative Strategist. All rights
+          &copy; {new Date().getFullYear()} Tibin Jacob — D2C Growth Expert. All rights
           reserved.
         </div>
         <div className="flex items-center space-x-6">

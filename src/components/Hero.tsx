@@ -20,9 +20,8 @@ export default function Hero({ index, activeTheme }: { index: number, activeThem
           transition={{ duration: 0.5, delay: 0.1 }}
           className="hero-title font-semibold tracking-[-0.04em] text-slate-950 mb-10 sm:mb-14 w-full"
         >
-          <span className="block">AI Creative Strategist</span>
+          <span className="block">D2C Growth Expert</span>
           <span className={`hero-rotating block font-display font-bold text-[0.95em] tracking-tight ${activeTheme.color}`}>
-            for{" "}
             <AnimatePresence mode="wait">
               <motion.span
                 key={index}
@@ -51,7 +50,7 @@ export default function Hero({ index, activeTheme }: { index: number, activeThem
             className={`inline-flex items-center justify-center px-7 py-4 text-base font-semibold text-white ${activeTheme.bg} hover:scale-105 rounded-full transition-all duration-300 shadow-xl ${activeTheme.shadow} group w-full sm:w-auto`}
           >
             <Play className="mr-2 w-4 h-4 fill-current transition-transform group-hover:scale-110" />
-            See Ad Creative
+            See My Work
           </a>
 
         </motion.div>
