@@ -48,11 +48,11 @@ export default function Hero({ index, activeTheme }: { index: number, activeThem
           className="flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3 sm:gap-5 w-full sm:w-auto"
         >
           <a 
-            href="#walkthrough" 
+            href="/case-studies/" 
             className={`inline-flex items-center justify-center px-7 py-4 text-base font-semibold text-white ${activeTheme.bg} hover:scale-105 rounded-full transition-all duration-300 shadow-xl ${activeTheme.shadow} group w-full sm:w-auto`}
           >
             <Play className="mr-2 w-4 h-4 fill-current transition-transform group-hover:scale-110" />
-            See an Account Walkthrough
+            View Case Studies
           </a>
 
         </motion.div>

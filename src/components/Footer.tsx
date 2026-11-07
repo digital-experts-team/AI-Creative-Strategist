@@ -17,7 +17,7 @@ export default function Footer() {
             <Twitter className="w-5 h-5" />
           </a>
           <a
-            href="https://www.linkedin.com/in/tibin-jacob-71ab89353"
+            href="https://www.linkedin.com/in/tibinjacob"
             target="_blank"
             rel="noopener noreferrer"
             className="text-zinc-400 hover:text-indigo-600 transition-colors"

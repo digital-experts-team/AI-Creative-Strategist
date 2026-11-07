@@ -1,59 +1,125 @@
-const decisions = [
+import type { ReactNode } from "react";
+
+const linkedIn = "https://www.linkedin.com/in/tibinjacob/";
+const cases = [
   {
-    title: "Find two reasons to buy",
-    copy: "For a premium carry-on, one ad shows what fits on a weekend trip. A second shows what makes the bag worth keeping for years. Each concept tests a different reason to buy at the same price.",
+    slug: "one-product-two-reasons",
+    label: "Sample walkthrough",
+    title: "One Product, Two Reasons to Buy",
+    intro: "Two ads for the same premium carry-on. Which reason to buy deserves the next round of spend?",
+    sections: [
+      ["The decision", "I’d test whether shoppers respond more to confidence that everything fits or confidence that the bag is worth keeping for years. I’d keep the product, price, and destination consistent."],
+      ["My role", "In this sample I’d write both briefs, produce the variants, launch the Meta test, and read ad performance alongside Shopify orders."],
+      ["Two creative briefs", "The weekend packing ad shows a real packing list fitting in the bag. The durability ad shows the parts that wear out first and what makes this bag worth its price. Each asset is built around a different buying reason."],
+      ["Three-phase retargeting", "Reconnect with the use case, answer a likely doubt with a relevant comparison, then clarify delivery or returns. I’d adapt the sequence to what shoppers saw and the volume available."],
+      ["The next move", "If clicks hold but orders fall, I’d check the product page, offer, and tracking. I’d fund the stronger angle once purchase volume and acquisition cost support the decision."],
+    ],
   },
   {
-    title: "Plan the three follow-ups",
-    copy: "Reconnect with the packing demo, resolve a likely doubt with a size or durability comparison, then make delivery and returns clear. I’d adapt the sequence to what shoppers saw and the audience volume.",
-  },
-  {
-    title: "Decide where spend goes",
-    copy: "I’d read acquisition cost against the margin target, then check Shopify orders before raising spend. If clicks hold while orders fall, I’d inspect the offer, product page, and tracking before funding another batch.",
+    slug: "when-clicks-hold",
+    label: "Workflow demo",
+    title: "When Clicks Hold but Orders Fall",
+    intro: "A Meta and Shopify workflow that helps the team decide where to investigate before it moves budget.",
+    sections: [
+      ["The decision", "Steady clicks alongside fewer purchases tells me to look beyond the ad. I’d check whether the offer, product page, checkout, or tracking changed in the same window."],
+      ["My role", "I built an n8n demo that reads campaign and store signals, attaches the evidence, and assigns the follow-up. This walkthrough uses sample data."],
+      ["Example alert", "Clicks are steady and Shopify purchases have fallen. Send the affected ads, landing page, and comparison window to the offer or product page owner. Ask them to check for recent changes and report what they find."],
+      ["The next move", "If Meta and Shopify purchases also diverge beyond their usual gap, route a tracking check and hold the budget recommendation. The media buyer reviews any proposed change before it is applied."],
+    ],
   },
 ];
 
-export function AccountWalkthrough() {
+const briefs = [
+  {
+    category: "Paid Social · July 2025",
+    title: "Meta brings WhatsApp marketing into Ads Manager",
+    change: "Meta announced centralized setup for WhatsApp marketing alongside Facebook and Instagram.",
+    audience: "Brands with an opted-in WhatsApp subscriber list and a team that can respond to conversations.",
+    action: "Define a qualified conversation and track the purchase path before comparing its cost with store acquisition.",
+    source: "https://about.fb.com/news/2025/07/centralized-campaigns-ai-support-businesses-whatsapp/",
+  },
+  {
+    category: "Meta Ads · August 2022",
+    title: "What the Advantage+ launch changed about testing",
+    change: "Meta introduced Advantage+ shopping campaigns with more automation in campaign setup and delivery.",
+    audience: "Ecommerce teams using automated campaign delivery while comparing creative concepts.",
+    action: "Give each ad a distinct buying reason and decide how you’ll judge it using purchases and acquisition cost before launch.",
+    source: "https://about.fb.com/news/2022/08/introducing-new-automation-tools-to-increase-sales-and-drive-growth/",
+  },
+];
+
+const linkStyle = "inline-block font-semibold text-blue-700 underline underline-offset-4";
+const cardStyle = "rounded-2xl border border-zinc-200 bg-zinc-50 p-6 sm:p-8";
+
+function Page({ label, title, intro, children }: { label: string; title: string; intro: string; children: ReactNode }) {
   return (
-    <section id="walkthrough" className="scroll-mt-28 border-t border-zinc-200 bg-white py-20 sm:py-24">
-      <div className="mx-auto max-w-7xl px-6">
-        <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-blue-700">Sample Account Walkthrough</p>
-        <h2 className="max-w-3xl text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl">
-          One Product. Two Angles. One Budget Decision.
-        </h2>
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {decisions.map(({ title, copy }, index) => (
-            <article key={title} className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6">
-              <p className="mb-4 text-sm font-bold text-blue-700">0{index + 1}</p>
-              <h3 className="mb-2 text-xl font-bold text-zinc-900">{title}</h3>
-              <p className="leading-relaxed text-zinc-600">{copy}</p>
-            </article>
-          ))}
-        </div>
-        <p className="mt-6 text-sm leading-relaxed text-zinc-600">
-          <strong className="text-zinc-900">Sample readout.</strong> Hold spend while we check the drop after the click. Give the stronger angle more budget once orders and acquisition cost support it.
-        </p>
-      </div>
+    <section className="mx-auto min-h-[70vh] max-w-6xl px-6 pb-20 pt-40 sm:pt-44">
+      <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-blue-700">{label}</p>
+      <h1 className="max-w-4xl text-4xl font-bold tracking-tight sm:text-6xl">{title}</h1>
+      <p className="mt-5 max-w-2xl text-lg leading-relaxed text-zinc-600">{intro}</p>
+      <div className="mt-10">{children}</div>
     </section>
   );
 }
 
-export function Engagements() {
-  return (
-    <section className="border-t border-zinc-200 bg-zinc-50 py-20 sm:py-24">
-      <div className="mx-auto max-w-7xl px-6">
-        <h2 className="mb-8 text-4xl font-bold tracking-tight text-zinc-900">How to Work With Me</h2>
-        <div className="grid gap-5 md:grid-cols-2">
-          <article className="rounded-2xl border border-zinc-200 bg-white p-6 sm:p-8">
-            <h3 className="mb-2 text-2xl font-bold text-zinc-900">For Agencies</h3>
-            <p className="leading-relaxed text-zinc-600">Start with one client account. I can own the brief, production, and Meta test, then give your team a readout with the next move and its rationale.</p>
-          </article>
-          <article className="rounded-2xl border border-zinc-200 bg-white p-6 sm:p-8">
-            <h3 className="mb-2 text-2xl font-bold text-zinc-900">For DTC Brands</h3>
-            <p className="leading-relaxed text-zinc-600">Start with a Meta and Shopify diagnostic. We’ll identify where the sale is breaking down and agree on the first test and what would justify more spend.</p>
-          </article>
+export function InnerPage({ pathname }: { pathname: string }) {
+  if (pathname === "/case-studies") {
+    return <Page label="Case Studies" title="Inside the Growth Decisions" intro="How I choose what to test, decide what shoppers should see next, and work out when an account is ready for more spend.">
+      <div className="grid gap-5 md:grid-cols-2">
+        {cases.map(item => <article key={item.slug} className={cardStyle}>
+          <p className="text-sm font-semibold text-blue-700">{item.label}</p>
+          <h2 className="mt-2 text-2xl font-bold">{item.title}</h2>
+          <p className="my-4 text-zinc-600">{item.intro}</p>
+          <a className={linkStyle} href={`/case-studies/${item.slug}/`}>Read the case</a>
+        </article>)}
+      </div>
+    </Page>;
+  }
+
+  const study = cases.find(item => pathname === `/case-studies/${item.slug}`);
+  if (study) {
+    return <Page label={study.label} title={study.title} intro={study.intro}>
+      <div className="max-w-3xl space-y-7">
+        {study.sections.map(([heading, copy]) => <section key={heading} className={cardStyle}>
+          <h2 className="mb-2 text-xl font-bold">{heading}</h2>
+          <p className="leading-relaxed text-zinc-600">{copy}</p>
+        </section>)}
+        <a className={linkStyle} href="/#contact">Walk Through a Product With Me</a>
+        <p><a className={linkStyle} href="/case-studies/">All case studies</a></p>
+      </div>
+    </Page>;
+  }
+
+  if (pathname === "/news") {
+    return <Page label="News" title="D2C Growth Briefs" intro="Platform changes that matter to ecommerce teams and what I’d check in the account.">
+      <div className="grid gap-5 md:grid-cols-2">
+        {briefs.map(brief => <article key={brief.source} className={cardStyle}>
+          <p className="text-sm font-semibold text-blue-700">{brief.category}</p>
+          <h2 className="my-3 text-2xl font-bold">{brief.title}</h2>
+          <dl className="mb-4 space-y-2 text-zinc-600">
+            {[["What changed", brief.change], ["Who it affects", brief.audience], ["What I’d check", brief.action]].map(([label, copy]) =>
+              <div key={label}><dt className="font-semibold text-zinc-900">{label}</dt><dd>{copy}</dd></div>
+            )}
+          </dl>
+          <a className={linkStyle} href={brief.source}>Read Meta’s announcement</a>
+        </article>)}
+      </div>
+    </Page>;
+  }
+
+  if (pathname === "/feed") {
+    return <Page label="LinkedIn" title="My Feed" intro="Short posts on ad angles, three-phase retargeting, and the decisions I make after a campaign goes live.">
+      <div className={cardStyle}>
+        <p className="mb-4 text-zinc-600">Read my latest posts on LinkedIn. Selected posts will appear here as they’re added.</p>
+        <div className="flex flex-wrap gap-5">
+          <a className={linkStyle} href={`${linkedIn}recent-activity/all/`}>View my LinkedIn posts</a>
+          <a className={linkStyle} href="/feed.xml">Subscribe via RSS</a>
         </div>
       </div>
-    </section>
-  );
+    </Page>;
+  }
+
+  return <Page label="404" title="Page not found" intro="Return to the portfolio to find my case studies, briefs, and contact details.">
+    <a className={linkStyle} href="/">Back to Home</a>
+  </Page>;
 }

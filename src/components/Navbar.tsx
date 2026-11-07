@@ -21,11 +21,11 @@ export default function Navbar({ activeTheme }: { activeTheme: any }) {
       className="fixed top-4 sm:top-6 left-0 right-0 z-50 px-4 sm:px-6 flex justify-center"
     >
       <div 
-        className={`flex items-center justify-between gap-3 sm:gap-8 bg-white/95 backdrop-blur-md rounded-[16px] px-4 sm:px-8 py-3.5 w-full max-w-6xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-zinc-100 transition-all duration-300 ${
+        className={`flex items-center justify-between flex-wrap gap-3 sm:gap-8 bg-white/95 backdrop-blur-md rounded-[16px] px-4 sm:px-8 py-3.5 w-full max-w-6xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-zinc-100 transition-all duration-300 ${
           scrolled ? "py-2.5 scale-[0.98] bg-white" : ""
         }`}
       >
-        <a href="#" className="flex items-center space-x-2 group">
+        <a href="/" className="flex items-center space-x-2 group">
           <div className="w-8 h-8 rounded-lg flex items-center justify-center text-zinc-900 transition-colors">
             <Play className="w-5 h-5 ml-0.5 animate-pulse" fill="currentColor" />
           </div>
@@ -34,30 +34,30 @@ export default function Navbar({ activeTheme }: { activeTheme: any }) {
           </span>
         </a>
 
-        <nav className="hidden lg:flex items-center space-x-8">
+        <nav aria-label="Main navigation" className="order-last flex w-full flex-wrap items-center gap-x-5 gap-y-2 lg:order-none lg:w-auto">
           <a
-            href="#walkthrough"
+            href="/case-studies/"
             className="text-[14px] font-medium text-zinc-600 hover:text-zinc-900 transition-colors"
           >
-            Walkthrough
+            Case Studies
           </a>
           <a
-            href="#portfolio"
+            href="/news/"
             className="text-[14px] font-medium text-zinc-600 hover:text-zinc-900 transition-colors"
           >
-            Works
+            News
           </a>
           <a
-            href="#services"
+            href="/feed/"
             className="text-[14px] font-medium text-zinc-600 hover:text-zinc-900 transition-colors"
           >
-            Playbook
+            My Feed
           </a>
           <a
-            href="#faq"
+            href="/"
             className="text-[14px] font-medium text-zinc-600 hover:text-zinc-900 transition-colors"
           >
-            FAQs
+            Home
           </a>
         </nav>
 

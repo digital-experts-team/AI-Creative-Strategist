@@ -7,7 +7,7 @@ import Portfolio from "./components/Portfolio";
 import FAQ from "./components/FAQ";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
-import { AccountWalkthrough, Engagements } from "./components/GrowthSections";
+import { InnerPage } from "./components/GrowthSections";
 import { phrases } from "./constants";
 
 export default function App() {
@@ -21,25 +21,26 @@ export default function App() {
   }, []);
 
   const activeTheme = phrases[index];
+  const pathname = window.location.pathname.replace(/\/+$/, "") || "/";
 
   return (
     <div className="min-h-screen bg-white text-zinc-900 font-sans selection:bg-zinc-200 selection:text-zinc-900">
       <Navbar activeTheme={activeTheme} />
       <main>
+        {pathname === "/" ? <>
         <Hero index={index} activeTheme={activeTheme} />
         <Statement />
-        <AccountWalkthrough />
         <div id="services">
           <Services />
         </div>
         <div id="portfolio">
           <Portfolio />
         </div>
-        <Engagements />
         <div id="faq">
           <FAQ />
         </div>
         <CTA activeTheme={activeTheme} />
+        </> : <InnerPage pathname={pathname} />}
       </main>
       <Footer />
     </div>
