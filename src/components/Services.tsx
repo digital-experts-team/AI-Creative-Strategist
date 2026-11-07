@@ -1,88 +1,65 @@
-import { motion } from "motion/react";
-import { Target, Clapperboard, FlaskConical, TrendingUp } from "lucide-react";
-import type { CSSProperties } from "react";
+import { Target, Clapperboard, Repeat2, TrendingUp } from "lucide-react";
 
-const services = [
+const playbooks = [
   {
-    headline: "The Reason-to-Buy Map",
-    impact: "I look for the moment a product becomes worth buying and the doubt that can stop the sale. I turn those findings into separate ad angles for the same product.",
+    title: "The Reason-to-Buy Map",
+    description: "I start with reviews, customer questions, and competing offers to find what makes the product worth buying and what might stop the sale.",
+    detail: "For the same carry-on, a packing demo tests whether everything fits. A durability comparison tests whether the bag is worth the price. Each gives the customer a different reason to buy.",
     icon: Target,
-    color: "#2563eb",
-    tint: "#eff6ff",
+    accent: "bg-blue-50 text-blue-700",
   },
   {
-    headline: "The First-Batch Test",
-    impact: "I build the first batch of AI and UGC ads around decisions I need to make on Meta. Each concept earns its place by answering a different question.",
+    title: "The First-Batch Test",
+    description: "I turn the strongest angles into AI and UGC ads, with a clear question for each concept before it goes into production.",
+    detail: "On Meta, I keep the offer and destination consistent when comparing angles. I look at how each ad earns attention and whether that attention turns into purchases.",
     icon: Clapperboard,
-    color: "#059669",
-    tint: "#ecfdf5",
+    accent: "bg-emerald-50 text-emerald-700",
   },
   {
-    headline: "Three-Phase Retargeting",
-    impact: "I plan three phases of follow-up based on what shoppers have already seen and what they may still need to see before buying.",
-    icon: FlaskConical,
-    color: "#e11d48",
-    tint: "#fff1f2",
+    title: "Three-Phase Retargeting",
+    description: "I plan three follow-ups: remind shoppers why they cared, answer a likely objection, and make the purchase easier.",
+    detail: "A video viewer might need a product demo. A returning visitor might need a comparison or review. Someone who reached checkout might need a clear answer on delivery or returns.",
+    icon: Repeat2,
+    accent: "bg-rose-50 text-rose-700",
   },
   {
-    headline: "The Spend Decision",
-    impact: "I read Meta and Shopify together to decide what to refresh, hold, or scale. My n8n workflows surface changes and route the evidence before a budget decision.",
+    title: "The Spend Decision",
+    description: "I read Meta and Shopify together to decide whether to refresh the creative, hold the budget, or increase spend.",
+    detail: "If clicks hold while purchases fall, my n8n demo routes the affected ads and date range to the person who owns the offer or product page. Proposed budget changes go to the media buyer for review.",
     icon: TrendingUp,
-    color: "#9333ea",
-    tint: "#faf5ff",
+    accent: "bg-purple-50 text-purple-700",
   },
 ];
 
 export default function Services() {
   return (
-    <section className="py-32 bg-[#f8f9fa] relative border-t border-zinc-200">
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
-          <h2 className="text-[15px] font-bold tracking-[0.2em] uppercase text-zinc-500 mb-3">HOW I WORK</h2>
-          <h3 className="text-4xl sm:text-5xl font-bold text-zinc-900 tracking-tight mb-4">
-            My D2C Growth Playbook
-          </h3>
-          <p className="text-xl text-zinc-500">
-            Four methods I use to take a product from its first ad test to its next growth decision.
+    <section aria-labelledby="playbooks-title" className="border-t border-zinc-200 bg-white py-16 sm:py-24 lg:py-28">
+      <div className="mx-auto grid max-w-7xl items-start gap-10 px-6 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:gap-20">
+        <header className="lg:sticky lg:top-36">
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-zinc-500">How I Work</p>
+          <h2 id="playbooks-title" className="max-w-md text-4xl font-bold leading-[1.05] tracking-tight text-zinc-950 sm:text-5xl xl:text-6xl">
+            My D2C Growth Playbooks
+          </h2>
+          <p className="mt-5 max-w-sm text-lg leading-relaxed text-zinc-600">
+            Four methods I use to find the angle, test it on Meta, plan the follow-up, and decide what deserves more budget.
           </p>
-        </div>
+        </header>
 
-        <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-x-10 gap-y-12">
-          {services.map((service, index) => {
-            const Icon = service.icon;
-            return (
-              <motion.article
-                key={service.headline}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.1 }}
-                transition={{ duration: 0.4, delay: index * 0.08 }}
-                style={{ "--service-color": service.color, "--service-tint": service.tint } as CSSProperties}
-                className="service-item group"
-              >
-                <div className="flex items-center gap-5 mb-4">
-                  <div className="service-icon" aria-hidden="true">
-                    <div className="service-cube">
-                      <div className="service-cube-face service-cube-front"><Icon size={23} strokeWidth={1.75} /></div>
-                      <div className="service-cube-face service-cube-top" />
-                      <div className="service-cube-face service-cube-right" />
-                    </div>
-                  </div>
-                  <h4 className="service-title text-[23px] leading-tight font-bold tracking-tight">
-                    {service.headline}
-                  </h4>
-                </div>
-                <p className="text-base text-zinc-600 leading-relaxed">{service.impact}</p>
-              </motion.article>
-            );
-          })}
-        </div>
-        <aside className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6 sm:p-8">
-          <h4 className="mb-2 text-lg font-bold text-zinc-900">Meta + Shopify Workflow Demo</h4>
-          <p className="max-w-3xl leading-relaxed text-zinc-600">
-            When clicks hold but orders fall, my n8n demo sends the affected ads and date range to the person who owns the offer or product page. Budget recommendations go to the media buyer for approval.
-          </p>
-        </aside>
+        <ol className="divide-y divide-zinc-200 border-y border-zinc-200">
+          {playbooks.map(({ title, description, detail, icon: Icon, accent }, index) => (
+            <li key={title} className="grid grid-cols-[auto_minmax(0,1fr)] items-start gap-4 py-8 sm:gap-6 sm:py-10">
+              <div aria-hidden="true" className={`grid h-11 w-11 place-items-center rounded-xl ${accent}`}>
+                <Icon size={22} strokeWidth={1.75} />
+              </div>
+              <div>
+                <p aria-hidden="true" className="mb-1 text-xs font-bold tracking-widest text-zinc-500">0{index + 1}</p>
+                <h3 className="text-2xl font-bold leading-tight tracking-tight text-zinc-950 sm:text-[1.75rem]">{title}</h3>
+                <p className="mt-3 text-base leading-relaxed text-zinc-700">{description}</p>
+                <p className="mt-3 text-base leading-relaxed text-zinc-600">{detail}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );
