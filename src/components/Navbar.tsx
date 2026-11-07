@@ -64,9 +64,9 @@ export default function Navbar({ activeTheme }: { activeTheme: any }) {
           >
             {menuOpen ? <X size={18} /> : <Menu size={18} />}
           </button>
-          <a href="https://wa.me/918129917227" target="_blank" rel="noopener noreferrer" className={`flex items-center gap-1 whitespace-nowrap px-2.5 sm:gap-3 sm:px-6 py-2.5 text-xs sm:text-sm font-semibold text-white bg-[#111] hover:bg-zinc-800 rounded-full transition-all duration-300 shadow-md`}>
-            Let’s Talk
-            <ArrowUpRight className="hidden h-4 w-4 sm:block" />
+          <a href="https://wa.me/918129917227" target="_blank" rel="noopener noreferrer" className={`flex items-center min-h-11 gap-2 whitespace-nowrap px-4 sm:gap-3 sm:px-6 py-2.5 text-sm font-semibold text-white bg-[#111] hover:bg-zinc-800 rounded-full transition-all duration-300 shadow-md`}>
+            Connect
+            <ArrowUpRight aria-hidden="true" className="h-4 w-4 shrink-0" />
           </a>
         </div>
       </div>
