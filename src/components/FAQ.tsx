@@ -4,16 +4,32 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "Can you own a client account within our agency?",
-    answer: "Yes. We agree on the account scope, access, budget, and reporting cadence. I can take a creative test from brief through launch and deliver a readout your team can share with the client.",
+    question: "What can I hand you on a DTC account?",
+    answer: "I can own the Meta work from ad angles and creative briefs through AI and UGC production, campaign launch, retargeting, and budget decisions. If you already have a buyer or creative team, we’ll agree on what I own and where we work together.",
   },
   {
-    question: "What should I bring to a first call?",
-    answer: "A product link, active ad, or client brief is enough to start. I’ll walk you through what I’d investigate first and what evidence would shape my next test.",
+    question: "Can you take on a client account inside our agency?",
+    answer: "Yes. I can slot into your existing process and own an agreed part of the account or the full Meta scope. I’ll brief the team, run the tests, and give you a client-ready readout that explains what changed, why it matters, and what I’d do next.",
+  },
+  {
+    question: "Our ads get clicks, but sales aren’t following. Where would you start?",
+    answer: "I’d follow the path from the ad to the product page and checkout, then compare Meta with what’s actually happening in Shopify. If the ad promises something the page doesn’t make clear, I’d test that gap before spending on another batch of ads.",
+  },
+  {
+    question: "How do you decide which ads are worth testing?",
+    answer: "I start with why someone would buy and what might make them hesitate. For the same product, one ad might show how it fits into their routine, while another answers whether it’s worth the price. I brief each ad around a different buying reason so the test can tell us what to make next.",
+  },
+  {
+    question: "When would you scale spend, and when would you hold it?",
+    answer: "I’d look at purchase volume, acquisition cost, and the margin you need to protect. If the results support more spend, I’ll explain where I’d put it. If the numbers are too thin or tracking is unclear, I’ll tell you what I’d check before making the move.",
   },
   {
     question: "Do you work beyond Meta?",
     answer: "I can scope a ChatGPT Ads pilot around a specific product, with a measurement plan and criteria for deciding whether to continue.",
+  },
+  {
+    question: "Can we start with one product or one client account?",
+    answer: "Yes. Bring one product, an active ad, or a client brief. We can agree on a focused first engagement with one clear question to answer. You’ll see how I brief the work, run the test, and explain the next decision before expanding the scope.",
   },
 ];
 
