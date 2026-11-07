@@ -1,8 +1,15 @@
+/// <reference types="vite/client" />
+
 import { motion, AnimatePresence } from "motion/react";
-import { Play } from "lucide-react";
+import { CalendarDays, ChartNoAxesColumnIncreasing, FlaskConical, Repeat2, Wallet } from "lucide-react";
 import { phrases } from "../constants";
 
+const specialtyIcons = [ChartNoAxesColumnIncreasing, FlaskConical, Repeat2, Wallet];
+const bookingUrl = import.meta.env.VITE_BOOKING_URL?.trim();
+
 export default function Hero({ index, activeTheme }: { index: number, activeTheme: any }) {
+  const SpecialtyIcon = specialtyIcons[index];
+
   return (
     <section className="hero-section relative flex items-center justify-center pt-36 pb-20 overflow-hidden bg-zinc-950">
       <img
@@ -22,9 +29,9 @@ export default function Hero({ index, activeTheme }: { index: number, activeThem
           className="font-semibold tracking-[-0.04em] text-slate-950 mb-5 w-full"
         >
           <span className="block text-[clamp(1.5rem,4.5vw,4rem)] leading-tight">D2C Growth Expert</span>
-          <span className={`mt-2 grid font-display font-bold text-[clamp(2.1rem,6vw,5.25rem)] leading-tight tracking-tight ${activeTheme.color}`}>
+          <span className={`mt-2 grid font-display font-bold text-[clamp(1.65rem,4vw,3.5rem)] leading-tight tracking-tight ${activeTheme.color}`}>
             {phrases.map(({ text }) => (
-              <span key={text} aria-hidden="true" className="invisible col-start-1 row-start-1">{text}</span>
+              <span key={text} aria-hidden="true" className="invisible col-start-1 row-start-1 flex items-center justify-center gap-2 sm:gap-3"><span className="w-[0.65em] shrink-0" /><span>{text}</span></span>
             ))}
             <AnimatePresence mode="wait">
               <motion.span
@@ -33,9 +40,10 @@ export default function Hero({ index, activeTheme }: { index: number, activeThem
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 exit={{ opacity: 0, y: -20, filter: "blur(10px)" }}
                 transition={{ duration: 0.3 }}
-                className="col-start-1 row-start-1"
+                className="col-start-1 row-start-1 flex items-center justify-center gap-2 sm:gap-3"
               >
-                {phrases[index].text}
+                <SpecialtyIcon aria-hidden="true" className="h-[0.65em] w-[0.65em] shrink-0" strokeWidth={1.75} />
+                <span>{phrases[index].text}</span>
               </motion.span>
             </AnimatePresence>
           </span>
@@ -47,11 +55,13 @@ export default function Hero({ index, activeTheme }: { index: number, activeThem
           className="flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3 sm:gap-5 w-full sm:w-auto"
         >
           <a 
-            href="/case-studies/" 
-            className={`inline-flex items-center justify-center px-7 py-4 text-base font-semibold text-white ${activeTheme.bg} hover:scale-105 rounded-full transition-all duration-300 shadow-xl ${activeTheme.shadow} group w-full sm:w-auto`}
+            href={bookingUrl || "https://wa.me/918129917227?text=Hi%20Tibin%2C%20I%27d%20like%20to%20schedule%20a%20call."}
+            target="_blank"
+            rel="noopener noreferrer" 
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-base font-semibold text-slate-950 shadow-lg transition-colors hover:bg-slate-100 sm:w-auto"
           >
-            <Play className="mr-2 w-4 h-4 fill-current transition-transform group-hover:scale-110" />
-            View Case Studies
+            <CalendarDays aria-hidden="true" className="h-4 w-4" />
+            {bookingUrl ? "Book a Call" : "Request a Call"}
           </a>
 
         </motion.div>
