@@ -6,8 +6,8 @@ export default function Statement() {
   return <StatementSection
     id="about"
     label="What I Own"
-    lead="I own Meta growth for DTC brands and agency clients,"
-    detail="from AI and UGC ad production to creative testing, retargeting, and spend decisions."
+    lead="I own growth for DTC brands and agency clients,"
+    detail="from ads grounded in buyer psychology to creative testing on Meta, retargeting, and deciding when to scale spend."
   />;
 }
 
