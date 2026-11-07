@@ -7,6 +7,7 @@ const playbooks = [
     detail: "The map shapes the brief. A shopper who doubts the price needs different proof from someone who doubts the product will work for them.",
     icon: Target,
     accent: "bg-blue-50 text-blue-700",
+    tint: "bg-blue-50/40",
   },
   {
     title: "My Meta Creative Tests",
@@ -14,6 +15,7 @@ const playbooks = [
     detail: "I look at where interest turns into purchase intent. That tells me whether to develop the angle further or change how the ad delivers it.",
     icon: Clapperboard,
     accent: "bg-emerald-50 text-emerald-700",
+    tint: "bg-emerald-50/40",
   },
   {
     title: "My Three-Phase Retargeting",
@@ -21,6 +23,7 @@ const playbooks = [
     detail: "What they’ve seen and where they stopped shape the next ad. That could mean a product demonstration, proof that answers a specific doubt, or a clearer path to checkout.",
     icon: Repeat2,
     accent: "bg-rose-50 text-rose-700",
+    tint: "bg-rose-50/40",
   },
   {
     title: "Ad Signals & Budget Pacing",
@@ -28,6 +31,7 @@ const playbooks = [
     detail: "The workflow sends the evidence to whoever can act on it. If it spots room to shift budget, it queues a recommendation for the media buyer to review.",
     icon: TrendingUp,
     accent: "bg-purple-50 text-purple-700",
+    tint: "bg-purple-50/40",
   },
 ];
 
@@ -46,8 +50,8 @@ export default function Services() {
         </header>
 
         <ol className="divide-y divide-zinc-200 border-y border-zinc-200">
-          {playbooks.map(({ title, description, detail, icon: Icon, accent }, index) => (
-            <li key={title} className="grid grid-cols-[auto_minmax(0,1fr)] items-start gap-4 py-8 sm:gap-6 sm:py-10">
+          {playbooks.map(({ title, description, detail, icon: Icon, accent, tint }, index) => (
+            <li key={title} className={`grid grid-cols-[auto_minmax(0,1fr)] items-start gap-4 px-4 py-8 sm:gap-6 sm:px-6 sm:py-10 ${tint}`}>
               <div aria-hidden="true" className={`grid h-11 w-11 place-items-center rounded-xl ${accent}`}>
                 <Icon size={22} strokeWidth={1.75} />
               </div>
