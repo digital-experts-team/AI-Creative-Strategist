@@ -1,3 +1,4 @@
+import { Image as ImageIcon } from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 
@@ -10,22 +11,50 @@ export default function Statement() {
   />;
 }
 
+const recentWork = [
+  { title: "Creative Brief", detail: "Find a reason to buy and turn it into an ad concept worth testing." },
+  { title: "Ad Production & Launch", detail: "Produce AI and UGC variants and launch the test on Meta." },
+  { title: "Retargeting", detail: "Plan the next ad around what shoppers have already seen or done." },
+  { title: "Budget Decision", detail: "Read the results and decide what to refresh, hold, or scale." },
+];
+
 export function RecentWorkStatement() {
-  return <StatementSection
-    id="recent-work"
-    label="From Brief to Budget"
-    lead="I take one product from its first creative brief to its next budget decision."
-    detail="Explore my recent work on ad production, campaign setup, and retargeting, and see how I turn the readout into the next move."
-    caseStudies
-  />;
+  return (
+    <section id="recent-work" aria-labelledby="recent-work-title" className="border-t border-zinc-200 bg-zinc-50 py-16 sm:py-20">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="mb-8 text-center">
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-zinc-500">Recent Work</p>
+          <h2 id="recent-work-title" className="text-3xl font-semibold tracking-tight text-zinc-900 sm:text-4xl">From Brief to Budget</h2>
+          <p className="mx-auto mt-3 max-w-2xl text-zinc-600">I take one product from its first creative brief to its next budget decision.</p>
+        </div>
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {recentWork.map(({ title, detail }) => (
+            <article key={title} className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
+              <div aria-hidden="true" className="grid aspect-[16/10] place-items-center border-b border-zinc-200 bg-zinc-100 text-zinc-400">
+                <ImageIcon className="h-8 w-8" strokeWidth={1.5} />
+              </div>
+              <div className="p-5">
+                <h3 className="text-base font-semibold text-zinc-900">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-zinc-600">{detail}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+        <div className="mt-8 text-center">
+          <a className="font-semibold text-blue-700 underline underline-offset-4" href="/case-studies/">
+            Explore Case Studies
+          </a>
+        </div>
+      </div>
+    </section>
+  );
 }
 
-function StatementSection({ id, label, lead, detail, caseStudies = false }: {
+function StatementSection({ id, label, lead, detail }: {
   id: string;
   label: string;
   lead: string;
   detail: string;
-  caseStudies?: boolean;
 }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -38,7 +67,7 @@ function StatementSection({ id, label, lead, detail, caseStudies = false }: {
   const y = useTransform(scrollYProgress, [0, 1], [50, 0]);
 
   return (
-    <section id={id} ref={ref} className={`py-16 sm:py-20 overflow-hidden ${caseStudies ? "border-t border-zinc-200 bg-zinc-50" : "bg-white"}`}>
+    <section id={id} ref={ref} className="py-16 sm:py-20 overflow-hidden bg-white">
       <div className="max-w-5xl mx-auto px-6">
         <p className="mb-4 text-center text-sm font-bold uppercase tracking-[0.2em] text-zinc-500">{label}</p>
         <motion.h2
@@ -48,13 +77,6 @@ function StatementSection({ id, label, lead, detail, caseStudies = false }: {
           {lead}{" "}
           <span className="text-zinc-500">{detail}</span>
         </motion.h2>
-        {caseStudies && (
-          <div className="mt-7 text-center">
-            <a className="font-semibold text-blue-700 underline underline-offset-4" href="/case-studies/">
-              Explore Case Studies
-            </a>
-          </div>
-        )}
       </div>
     </section>
   );
