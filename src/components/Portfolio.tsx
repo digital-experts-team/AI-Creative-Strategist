@@ -1,9 +1,9 @@
 import { motion } from "motion/react";
 
 const shortFormGifs = [
-  { id: 1, url: "https://res.cloudinary.com/drzbibtmm/raw/upload/v1794075366/portfolio/clideo-crop-original.gif", alt: "Performance Ad" },
+  { id: 1, url: "https://i.ibb.co/PvsvnHVx/clideo-editor-a489ac75a9ce461c883403c5a755104e-ezgif-com-crop.gif", alt: "Performance Ad" },
   { id: 2, url: "https://i.ibb.co/xKBF7nq4/Generative-AI.gif", alt: "Generative AI" },
-  { id: 3, url: "https://res.cloudinary.com/drzbibtmm/raw/upload/v1794075366/portfolio/ugc-serum-original.gif", alt: "UGC Serum Ad" },
+  { id: 3, url: "https://i.ibb.co/1Gj0VRNM/UGC-Serum-ezgif-com-video-to-gif-converter.gif", alt: "UGC Serum Ad" },
   { id: 4, url: "https://i.ibb.co/BH8kBTs4/Ecommerce-Brand.gif", alt: "Ecommerce Brand" },
 ];
 
