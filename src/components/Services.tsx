@@ -2,30 +2,30 @@ import { Target, Clapperboard, Repeat2, TrendingUp } from "lucide-react";
 
 const playbooks = [
   {
-    title: "The Reason-to-Buy Map",
-    description: "I start with reviews, customer questions, and competing offers to find what makes the product worth buying and what might stop the sale.",
-    detail: "For the same carry-on, a packing demo tests whether everything fits. A durability comparison tests whether the bag is worth the price. Each gives the customer a different reason to buy.",
+    title: "Buyer Psychology Mapping",
+    description: "I map what makes someone consider a product, what makes them hesitate, and what proof would help them decide. That gives me distinct buying reasons to turn into ads.",
+    detail: "The map shapes the brief. A shopper who doubts the price needs different proof from someone who doubts the product will work for them.",
     icon: Target,
     accent: "bg-blue-50 text-blue-700",
   },
   {
-    title: "The First-Batch Test",
-    description: "I turn the strongest angles into AI and UGC ads, with a clear question for each concept before it goes into production.",
-    detail: "On Meta, I keep the offer and destination consistent when comparing angles. I look at how each ad earns attention and whether that attention turns into purchases.",
+    title: "My Meta Creative Tests",
+    description: "I turn those buying reasons into AI and UGC concepts and give each ad a question to answer on Meta.",
+    detail: "I look at where interest turns into purchase intent. That tells me whether to develop the angle further or change how the ad delivers it.",
     icon: Clapperboard,
     accent: "bg-emerald-50 text-emerald-700",
   },
   {
-    title: "Three-Phase Retargeting",
-    description: "I plan three follow-ups: remind shoppers why they cared, answer a likely objection, and make the purchase easier.",
-    detail: "A video viewer might need a product demo. A returning visitor might need a comparison or review. Someone who reached checkout might need a clear answer on delivery or returns.",
+    title: "My Three-Phase Retargeting",
+    description: "I use a three-phase sequence that changes the message as shoppers get closer to buying.",
+    detail: "What they’ve seen and where they stopped shape the next ad. That could mean a product demonstration, proof that answers a specific doubt, or a clearer path to checkout.",
     icon: Repeat2,
     accent: "bg-rose-50 text-rose-700",
   },
   {
-    title: "The Spend Decision",
-    description: "I read Meta and Shopify together to decide whether to refresh the creative, hold the budget, or increase spend.",
-    detail: "If clicks hold while purchases fall, my n8n demo routes the affected ads and date range to the person who owns the offer or product page. Proposed budget changes go to the media buyer for review.",
+    title: "Ad Signals & Budget Pacing",
+    description: "I use automated reporting across Meta and Shopify to flag ads that may need a refresh, purchase drops after the click, and campaigns that are spending ahead of plan.",
+    detail: "The workflow sends the evidence to whoever can act on it. If it spots room to shift budget, it queues a recommendation for the media buyer to review.",
     icon: TrendingUp,
     accent: "bg-purple-50 text-purple-700",
   },
@@ -38,10 +38,10 @@ export default function Services() {
         <header className="lg:sticky lg:top-36">
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-zinc-500">How I Work</p>
           <h2 id="playbooks-title" className="max-w-md text-4xl font-bold leading-[1.05] tracking-tight text-zinc-950 sm:text-5xl xl:text-6xl">
-            My D2C Growth Playbooks
+            My Ad Strategies
           </h2>
           <p className="mt-5 max-w-sm text-lg leading-relaxed text-zinc-600">
-            Four methods I use to find the angle, test it on Meta, plan the follow-up, and decide what deserves more budget.
+            How I use buyer psychology to brief ads, sequence the follow-up, and spot when creative or spend needs attention.
           </p>
         </header>
 
