@@ -41,7 +41,7 @@ export default function Portfolio() {
         <div className="mb-12">
           <h2 className="text-4xl font-bold text-zinc-900 mb-4">Selected D2C Ad Work</h2>
           <p className="text-xl text-zinc-600">
-            AI product scenes, UGC edits, and paid social ads. Pick a piece and I’ll walk you through the brief behind it, how I’d test it, and what I’d run next.
+            See the ad formats I can produce from a brief, including performance ads, AI visuals, and UGC edits.
           </p>
         </div>
 
@@ -62,9 +62,10 @@ export default function Portfolio() {
                 loading="lazy"
                 width={540}
                 height={960}
-                className="block w-full h-full aspect-[9/16] object-cover object-center"
+                className="block w-full aspect-[9/16] object-cover object-center"
                 referrerPolicy="no-referrer"
               />
+              <p className="px-4 py-3 text-sm font-semibold text-zinc-800">{gif.alt}</p>
             </motion.div>
           ))}
         </div>

@@ -4,29 +4,16 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "Can you own growth for a brand or an agency client?",
-    answer:
-      "Yes. I can own the work from product research and creative production through Meta campaign management, retargeting, and spend decisions. I can do that directly for a brand or within an agency’s paid social team.",
+    question: "Can you own a client account within our agency?",
+    answer: "Yes. We agree on the account scope, access, budget, and reporting cadence. I can take a creative test from brief through launch and deliver a readout your team can share with the client.",
   },
   {
-    question: "What would you do first on our account?",
-    answer:
-      "I’d take one product, look at the ads already getting spend, and check what happens on the store after the click. From there, I’d show you the first batch I’d make and the decision each ad would help me make.",
-  },
-  {
-    question: "What makes your three-phase retargeting different?",
-    answer:
-      "I decide what each follow-up ad needs to accomplish based on where the shopper showed interest. In a walkthrough, I can show how I’d sequence the ads for your product and what would make me change the order.",
+    question: "What should I bring to a first call?",
+    answer: "A product link, active ad, or client brief is enough to start. I’ll walk you through what I’d investigate first and what evidence would shape my next test.",
   },
   {
     question: "Do you work beyond Meta?",
-    answer:
-      "I also scope ChatGPT Ads pilots for D2C products, with a clear test objective and a plan for deciding whether the channel deserves more spend.",
-  },
-  {
-    question: "What can we cover in a first conversation?",
-    answer:
-      "Bring a product link, an active ad, or a client brief. I’ll show you what I’d test first, what I’d run next, and what I’d need to see before putting more budget behind it.",
+    answer: "I can scope a ChatGPT Ads pilot around a specific product, with a measurement plan and criteria for deciding whether to continue.",
   },
 ];
 

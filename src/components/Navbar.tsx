@@ -36,10 +36,10 @@ export default function Navbar({ activeTheme }: { activeTheme: any }) {
 
         <nav className="hidden lg:flex items-center space-x-8">
           <a
-            href="#about"
+            href="#walkthrough"
             className="text-[14px] font-medium text-zinc-600 hover:text-zinc-900 transition-colors"
           >
-            About
+            Walkthrough
           </a>
           <a
             href="#portfolio"
@@ -51,7 +51,7 @@ export default function Navbar({ activeTheme }: { activeTheme: any }) {
             href="#services"
             className="text-[14px] font-medium text-zinc-600 hover:text-zinc-900 transition-colors"
           >
-            Services
+            Playbook
           </a>
           <a
             href="#faq"

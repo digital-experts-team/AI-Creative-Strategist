@@ -13,15 +13,16 @@ export default function Statement() {
   const y = useTransform(scrollYProgress, [0, 1], [50, 0]);
 
   return (
-    <section id="about" ref={ref} className="py-32 bg-white overflow-hidden">
+    <section id="about" ref={ref} className="py-16 sm:py-20 bg-white overflow-hidden">
       <div className="max-w-5xl mx-auto px-6">
+        <p className="mb-4 text-center text-sm font-bold uppercase tracking-[0.2em] text-zinc-500">What I Own</p>
         <motion.h2
           style={{ filter: blur, opacity, y }}
           className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-zinc-900 leading-[1.2] text-center tracking-tight max-w-4xl mx-auto"
         >
-          I help D2C brands find what sells, build the ads to test it, and run the Meta campaigns that prove where to spend next.{" "}
+          I take one product from its first creative brief to its next budget decision.{" "}
           <span className="text-zinc-400">
-            I’ve developed my own methods for finding the message that earns the first click, deciding what a shopper should see next, and spotting when a campaign is ready for more budget.
+            That includes production, campaign setup, retargeting, and a readout your team can act on.
           </span>
         </motion.h2>
       </div>

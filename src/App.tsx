@@ -7,6 +7,7 @@ import Portfolio from "./components/Portfolio";
 import FAQ from "./components/FAQ";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
+import { AccountWalkthrough, Engagements } from "./components/GrowthSections";
 import { phrases } from "./constants";
 
 export default function App() {
@@ -27,12 +28,14 @@ export default function App() {
       <main>
         <Hero index={index} activeTheme={activeTheme} />
         <Statement />
+        <AccountWalkthrough />
         <div id="services">
           <Services />
         </div>
         <div id="portfolio">
           <Portfolio />
         </div>
+        <Engagements />
         <div id="faq">
           <FAQ />
         </div>

@@ -77,6 +77,12 @@ export default function Services() {
             );
           })}
         </div>
+        <aside className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6 sm:p-8">
+          <h4 className="mb-2 text-lg font-bold text-zinc-900">Meta + Shopify Workflow Demo</h4>
+          <p className="max-w-3xl leading-relaxed text-zinc-600">
+            When clicks hold but orders fall, my n8n demo sends the affected ads and date range to the person who owns the offer or product page. Budget recommendations go to the media buyer for approval.
+          </p>
+        </aside>
       </div>
     </section>
   );

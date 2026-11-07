@@ -74,7 +74,7 @@ export default function CTA({ activeTheme }: { activeTheme: any }) {
   }, []);
 
   return (
-    <section className="min-h-[65svh] py-24 bg-black relative overflow-hidden flex items-center justify-center">
+    <section id="contact" className="min-h-[65svh] py-24 bg-black relative overflow-hidden flex items-center justify-center">
       {/* Background Video */}
       <video
         ref={videoRef}
@@ -97,7 +97,7 @@ export default function CTA({ activeTheme }: { activeTheme: any }) {
           transition={{ duration: 0.5 }}
           className="text-4xl sm:text-5xl font-bold text-white mb-10"
         >
-          See How I’d Grow Your Account
+          See What I’d Test on Your Account
         </motion.h2>
 
         <motion.div
@@ -117,7 +117,7 @@ export default function CTA({ activeTheme }: { activeTheme: any }) {
             className="inline-flex items-center text-zinc-300 hover:text-white transition-colors duration-300 font-medium group"
           >
             <Mail className="w-5 h-5 mr-2 opacity-70 group-hover:opacity-100 transition-opacity" />
-            Send a product link or client brief
+            Email a product link, active ad, or client brief
           </a>
         </motion.div>
       </div>
