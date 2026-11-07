@@ -26,8 +26,8 @@ export default function Hero({ index, activeTheme }: { index: number, activeThem
           transition={{ duration: 0.5, delay: 0.1 }}
           className="font-semibold tracking-[-0.04em] text-slate-950 w-full"
         >
-          <span className="block text-[clamp(1.75rem,7.4vw,2.5rem)] leading-tight sm:text-[clamp(1.5rem,4.5vw,4rem)]">D2C Growth Expert</span>
-          <span className={`mt-2 grid font-hero font-black text-[clamp(1.65rem,4vw,3.5rem)] leading-tight tracking-[-0.055em] ${activeTheme.color}`}>
+          <span className="block text-[clamp(2.25rem,9vw,3.25rem)] leading-tight sm:text-[clamp(1.5rem,4.5vw,4rem)]">D2C Ad Expert</span>
+          <span className={`mt-2 grid font-hero font-black text-[clamp(1.9rem,8vw,2.85rem)] sm:text-[clamp(1.65rem,4vw,3.5rem)] leading-tight tracking-[-0.055em] ${activeTheme.color}`}>
             {phrases.map(({ text }) => (
               <span key={text} aria-hidden="true" className="invisible col-start-1 row-start-1">{text}</span>
             ))}
