@@ -7,6 +7,9 @@ export default function Footer() {
         <div className="text-zinc-500 text-sm">
           &copy; {new Date().getFullYear()} Tibin Jacob — D2C Growth Expert. All rights
           reserved.
+          <a href="/case-studies/" className="mt-2 block w-fit text-xs text-zinc-500 underline-offset-4 hover:underline focus-visible:underline">
+            Case studies
+          </a>
         </div>
         <div className="flex items-center space-x-6">
           <a

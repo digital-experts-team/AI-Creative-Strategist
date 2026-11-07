@@ -42,7 +42,6 @@ export default function Navbar({ activeTheme }: { activeTheme: any }) {
         >
           {[
             { href: "/#portfolio", label: "Selected Work" },
-            { href: "/case-studies/", label: "Case Studies" },
             { href: "/news/", label: "News" },
             { href: "/feed/", label: "My Feed" },
             { href: "/", label: "Home" },
