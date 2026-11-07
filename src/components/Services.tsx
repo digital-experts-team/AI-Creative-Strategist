@@ -82,7 +82,6 @@ export default function Services() {
           <p className="max-w-3xl leading-relaxed text-zinc-600">
             When clicks hold but orders fall, my n8n demo sends the affected ads and date range to the person who owns the offer or product page. Budget recommendations go to the media buyer for approval.
           </p>
-          <a className="mt-4 inline-block font-semibold text-blue-700 underline" href="/#when-clicks-hold">See the workflow in context</a>
         </aside>
       </div>
     </section>

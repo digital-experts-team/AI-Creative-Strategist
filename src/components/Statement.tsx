@@ -40,11 +40,6 @@ export function RecentWorkStatement() {
             </article>
           ))}
         </div>
-        <div className="mt-8 text-center">
-          <a className="font-semibold text-blue-700 underline underline-offset-4" href="/#case-studies">
-            Explore Case Studies
-          </a>
-        </div>
       </div>
     </section>
   );

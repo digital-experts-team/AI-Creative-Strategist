@@ -38,7 +38,7 @@ function Page({ label, title, intro, children }: { label: string; title: string;
 export function InnerPage({ pathname }: { pathname: string }) {
   const legacyCasePage = pathname === "/case-studies" || pathname.startsWith("/case-studies/");
   useEffect(() => {
-    if (legacyCasePage) window.location.replace("/#case-studies");
+    if (legacyCasePage) window.location.replace("/#portfolio");
   }, [legacyCasePage]);
 
   if (legacyCasePage) return null;
