@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import type { ReactNode } from "react";
+import { CaseStudyPage, caseStudyPages } from "./CaseStudies";
 
 const linkedIn = "https://www.linkedin.com/in/tibinjacob/";
 const briefs = [
@@ -36,12 +37,13 @@ function Page({ label, title, intro, children }: { label: string; title: string;
 }
 
 export function InnerPage({ pathname }: { pathname: string }) {
-  const legacyCasePage = pathname === "/case-studies" || pathname.startsWith("/case-studies/");
+  const legacyCasePage = pathname === "/case-studies/one-product-two-reasons" || pathname === "/case-studies/when-clicks-hold";
   useEffect(() => {
-    if (legacyCasePage) window.location.replace("/#portfolio");
+    if (legacyCasePage) window.location.replace("/case-studies/");
   }, [legacyCasePage]);
 
   if (legacyCasePage) return null;
+  if (caseStudyPages.some(page => page.route === pathname)) return <CaseStudyPage pathname={pathname} />;
 
   if (pathname === "/news") {
     return <Page label="News" title="D2C Growth Briefs" intro="Platform changes that matter to ecommerce teams and what I’d check in the account.">
