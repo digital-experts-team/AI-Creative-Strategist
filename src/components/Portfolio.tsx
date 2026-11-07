@@ -10,7 +10,7 @@ const shortFormGifs = [
 const cases = [
   {
     slug: "one-product-two-reasons",
-    preview: shortFormGifs[3].url,
+    preview: "https://media.giphy.com/media/QrcOP9u0fSZLaPGnqb/giphy.gif",
     highlights: ["Two ad angles", "Three-phase retargeting"],
     label: "Sample walkthrough",
     title: "One Product, Two Reasons to Buy",
@@ -25,7 +25,7 @@ const cases = [
   },
   {
     slug: "when-clicks-hold",
-    preview: shortFormGifs[0].url,
+    preview: "https://media.giphy.com/media/j6Yt6eR3LcxWl7p0tb/giphy.gif",
     highlights: ["Meta + Shopify signals", "n8n alert routing"],
     label: "Workflow demo",
     title: "When Clicks Hold but Orders Fall",
