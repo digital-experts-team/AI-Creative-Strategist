@@ -3,10 +3,10 @@ import { Play, X } from "lucide-react";
 import { motion } from "motion/react";
 
 const shortFormGifs: { id: number; url: string; alt: string; driveVideoId?: string }[] = [
-  { id: 3, url: "https://i.ibb.co/1Gj0VRNM/UGC-Serum-ezgif-com-video-to-gif-converter.gif", alt: "UGC Serum Ad", driveVideoId: "1v6-d3wrxn1lmokyBj96bLl16YOf9mdtZ" },
-  { id: 2, url: "https://i.ibb.co/xKBF7nq4/Generative-AI.gif", alt: "Generative AI" },
-  { id: 1, url: "https://i.ibb.co/PvsvnHVx/clideo-editor-a489ac75a9ce461c883403c5a755104e-ezgif-com-crop.gif", alt: "Performance Ad" },
-  { id: 4, url: "https://i.ibb.co/BH8kBTs4/Ecommerce-Brand.gif", alt: "Ecommerce Brand" },
+  { id: 3, url: "https://i.ibb.co/1Gj0VRNM/UGC-Serum-ezgif-com-video-to-gif-converter.gif", alt: "Serum Brand · UK", driveVideoId: "1v6-d3wrxn1lmokyBj96bLl16YOf9mdtZ" },
+  { id: 2, url: "https://i.ibb.co/xKBF7nq4/Generative-AI.gif", alt: "Paper Boat · India" },
+  { id: 1, url: "https://i.ibb.co/PvsvnHVx/clideo-editor-a489ac75a9ce461c883403c5a755104e-ezgif-com-crop.gif", alt: "Lipheist · Dubai", driveVideoId: "17EeleCYgko-pBjYA_nafpRrVOU-NW1pB" },
+  { id: 4, url: "https://i.ibb.co/BH8kBTs4/Ecommerce-Brand.gif", alt: "Glossier · USA", driveVideoId: "15_M74Niid72qZRDB_yGnGbJaLvo58an6" },
 ];
 
 export default function Portfolio() {
