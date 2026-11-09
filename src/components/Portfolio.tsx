@@ -4,7 +4,7 @@ import { Play, X } from "lucide-react";
 import { motion } from "motion/react";
 
 const shortFormGifs: { id: number; url: string; alt: string; videoUrl?: string }[] = [
-  { id: 3, url: "https://i.ibb.co/1Gj0VRNM/UGC-Serum-ezgif-com-video-to-gif-converter.gif", alt: "Serum Brand · UK", videoUrl: "https://res.cloudinary.com/drzbibtmm/video/upload/v1794079530/portfolio/serum-ad.mp4" },
+  { id: 3, url: "https://i.ibb.co/CKKVZfrV/bellavita-2-1.gif", alt: "Bella Vita", videoUrl: "https://res.cloudinary.com/drzbibtmm/video/upload/w_720,q_auto/v1794234217/portfolio/bella-vita-ad.mp4" },
   { id: 2, url: "https://i.ibb.co/ksJbGc5B/Mody-Pineapple-ezgif-com-video-to-gif-converter.gif", alt: "Mody Pineapple", videoUrl: "https://res.cloudinary.com/drzbibtmm/video/upload/v1794080832/portfolio/mody-pineapple-ad.mp4" },
   { id: 1, url: "https://i.ibb.co/PvsvnHVx/clideo-editor-a489ac75a9ce461c883403c5a755104e-ezgif-com-crop.gif", alt: "Lipheist · Dubai", videoUrl: "https://res.cloudinary.com/drzbibtmm/video/upload/v1794079531/portfolio/lipheist-ad.mp4" },
   { id: 4, url: "https://i.ibb.co/BH8kBTs4/Ecommerce-Brand.gif", alt: "Glossier · USA", videoUrl: "https://res.cloudinary.com/drzbibtmm/video/upload/v1794079530/portfolio/glossier-ad.mp4" },
